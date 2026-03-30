@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Holy DS — Product Card</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    @font-face {
+      font-family: 'PP Agrandir';
+      font-weight: 400;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/PPAgrandir-Regular.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'PP Agrandir';
+      font-weight: 600;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/PPAgrandir-Medium.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'PP Agrandir';
+      font-weight: 700;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/PPAgrandir-Bold.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'PP Agrandir';
+      font-weight: 800;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/PPAgrandir-Heavy.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'PP Agrandir';
+      font-weight: 900;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/PPAgrandir-Black.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'ObviouslyNarrow';
+      font-weight: 900;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/ObviouslyNarrow-Black.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Instrument Sans';
+      font-weight: 400;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/instrumentsans_n4.db86542ae5e1596dbdb28c279ae6c2086c4c5bfa.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Instrument Sans';
+      font-weight: 600;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/instrumentsans_n6.27dc66245013a6f7f317d383a3cc9a0c347fb42d.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'ExtraChunkPlease';
+      font-weight: 400;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/ExtraChunkPlease-Regular.woff2') format('woff2');
+    }
+  </style>
+</head>
+<body class="page-body">
+
+<div class="page-header">
+      <div class="page-header-eyebrow">Components</div>
+      <h1>Product Card</h1>
+      <p>The core commerce unit. Displays a product image, name, variant selector, price, and add-to-cart CTA. Image backgrounds use the brand yellow (#FFEA23).</p>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Default</div>
+      <div style="display:flex;gap:20px;flex-wrap:wrap;">
+        <div class="product-card-demo">
+          <div class="product-card-image">
+            🥤
+            <span class="product-badge">New</span>
+          </div>
+          <div class="product-card-body">
+            <div class="product-card-brand">Holy</div>
+            <div class="product-card-title">Energy — Tropical Storm</div>
+            <div class="product-card-variants">
+              <button class="variant-chip active">50 Port.</button>
+              <button class="variant-chip">10 Port.</button>
+              <button class="variant-chip">1 Port.</button>
+            </div>
+            <div class="product-card-price-row">
+              <div>
+                <div class="product-card-price">24,99 €</div>
+              </div>
+              <div class="product-card-price-original">29,99 €</div>
+            </div>
+            <button class="product-card-btn">In den Warenkorb</button>
+          </div>
+        </div>
+
+        <div class="product-card-demo">
+          <div class="product-card-image" style="background:var(--color-btn-tertiary);">
+            💧
+          </div>
+          <div class="product-card-body">
+            <div class="product-card-brand">Holy</div>
+            <div class="product-card-title">Hydration — Lemon Lime</div>
+            <div class="product-card-variants">
+              <button class="variant-chip active">50 Port.</button>
+              <button class="variant-chip">10 Port.</button>
+            </div>
+            <div class="product-card-price-row">
+              <div>
+                <div class="product-card-price">22,99 €</div>
+              </div>
+            </div>
+            <button class="product-card-btn" style="background:var(--color-btn-tertiary);">In den Warenkorb</button>
+          </div>
+        </div>
+
+        <div class="product-card-demo">
+          <div class="product-card-image" style="background:var(--color-btn-sage);">
+            🍵
+            <span class="product-badge" style="background:var(--color-black);">Bestseller</span>
+          </div>
+          <div class="product-card-body">
+            <div class="product-card-brand">Holy</div>
+            <div class="product-card-title">Iced Tea — Peach</div>
+            <div class="product-card-variants">
+              <button class="variant-chip active">50 Port.</button>
+              <button class="variant-chip">10 Port.</button>
+            </div>
+            <div class="product-card-price-row">
+              <div>
+                <div class="product-card-price">21,99 €</div>
+              </div>
+            </div>
+            <button class="product-card-btn" style="background:var(--color-btn-sage);">In den Warenkorb</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Specs</div>
+      <div class="demo-box padded">
+        <table class="token-table">
+          <thead><tr><th>Element</th><th>Spec</th></tr></thead>
+          <tbody>
+            <tr><td>Card border</td><td>1px solid #CFCBBF</td></tr>
+            <tr><td>Card background</td><td>#FFFFFF</td></tr>
+            <tr><td>Image area height</td><td>200px (desktop) / 160px (mobile)</td></tr>
+            <tr><td>Image background</td><td>#FFEA23 (default), varies by category</td></tr>
+            <tr><td>Card padding</td><td>16px</td></tr>
+            <tr><td>Product name font</td><td>ObviouslyNarrow 900 · 20px · uppercase</td></tr>
+            <tr><td>Price font</td><td>Instrument Sans 700 · 18px</td></tr>
+            <tr><td>CTA height</td><td>44px · full width</td></tr>
+            <tr><td>Variant chip border</td><td>1px solid #CFCBBF · active: 1px solid #000 + #000 bg</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+</body>
+</html>

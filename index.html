@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Holy — Design System</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+</head>
+<body>
+
+<!-- ──────────────── HAMBURGER ──────────────── -->
+<button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+  <span></span><span></span><span></span>
+</button>
+<div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+<!-- ──────────────── SIDEBAR ──────────────── -->
+<nav class="sidebar" id="sidebar">
+  <div class="sidebar-logo">
+    <a href="/"><img src="holy-logo.svg" alt="Holy" class="sidebar-logo-mark"></a>
+    <span class="sidebar-logo-sub">Design System</span>
+  </div>
+
+  <div class="nav-group">
+    <span class="nav-group-label">Foundations</span>
+    <a class="nav-link" data-page="colors" href="pages/colors.html">
+      <span class="nav-dot"></span> Colors
+    </a>
+    <a class="nav-link" data-page="typography" href="pages/typography.html">
+      <span class="nav-dot"></span> Typography
+    </a>
+    <a class="nav-link" data-page="spacing" href="pages/spacing.html">
+      <span class="nav-dot"></span> Spacing &amp; Grid
+    </a>
+    <a class="nav-link" data-page="tokens" href="pages/tokens.html">
+      <span class="nav-dot"></span> Design Tokens
+    </a>
+    <a class="nav-link" data-page="icons" href="pages/icons.html">
+      <span class="nav-dot"></span> Icons
+    </a>
+  </div>
+
+  <div class="nav-group">
+    <span class="nav-group-label">Components</span>
+    <a class="nav-link" data-page="announcement-bar" href="pages/announcement-bar.html">
+      <span class="nav-dot"></span> Announcement Bar
+    </a>
+    <a class="nav-link" data-page="header" href="pages/header.html">
+      <span class="nav-dot"></span> Header &amp; Nav
+    </a>
+    <a class="nav-link" data-page="mega-menu" href="pages/mega-menu.html">
+      <span class="nav-dot"></span> Mega Menu
+    </a>
+    <a class="nav-link" data-page="scrolling-banner" href="pages/scrolling-banner.html">
+      <span class="nav-dot"></span> Scrolling Banner
+    </a>
+    <a class="nav-link" data-page="hero" href="pages/hero.html">
+      <span class="nav-dot"></span> Hero Section
+    </a>
+    <a class="nav-link" data-page="buttons" href="pages/buttons.html">
+      <span class="nav-dot"></span> Buttons
+    </a>
+    <a class="nav-link" data-page="badges" href="pages/badges.html">
+      <span class="nav-dot"></span> Badges &amp; Labels
+    </a>
+    <a class="nav-link" data-page="product-card" href="pages/product-card.html">
+      <span class="nav-dot"></span> Product Card
+    </a>
+    <a class="nav-link" data-page="product-grid" href="pages/product-grid.html">
+      <span class="nav-dot"></span> Product Grid
+    </a>
+    <a class="nav-link" data-page="forms" href="pages/forms.html">
+      <span class="nav-dot"></span> Form Fields
+    </a>
+    <a class="nav-link" data-page="trust-bar" href="pages/trust-bar.html">
+      <span class="nav-dot"></span> Trust Bar
+    </a>
+    <a class="nav-link" data-page="country-selector" href="pages/country-selector.html">
+      <span class="nav-dot"></span> Country Selector
+    </a>
+    <a class="nav-link" data-page="footer" href="pages/footer.html">
+      <span class="nav-dot"></span> Footer
+    </a>
+  </div>
+</nav>
+
+<!-- ──────────────── MAIN CONTENT ──────────────── -->
+<main class="main">
+  <iframe id="content-frame" class="content-frame" src="pages/colors.html"></iframe>
+</main>
+
+<script>
+  const sidebar  = document.getElementById('sidebar');
+  const overlay  = document.getElementById('sidebar-overlay');
+  const toggle   = document.getElementById('menu-toggle');
+
+  function openSidebar() {
+    sidebar.classList.add('open');
+    overlay.classList.add('open');
+    toggle.classList.add('open');
+  }
+
+  function closeSidebar() {
+    sidebar.classList.remove('open');
+    overlay.classList.remove('open');
+    toggle.classList.remove('open');
+  }
+
+  toggle.addEventListener('click', () =>
+    sidebar.classList.contains('open') ? closeSidebar() : openSidebar()
+  );
+  overlay.addEventListener('click', closeSidebar);
+
+  function showPage(id) {
+    document.getElementById('content-frame').src = `pages/${id}.html`;
+
+    document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+    document.querySelectorAll('.nav-link[data-page]').forEach(link => {
+      if (link.dataset.page === id) link.classList.add('active');
+    });
+
+    history.replaceState(null, '', `#${id}`);
+    closeSidebar();
+  }
+
+  const initial = location.hash.replace('#', '') || 'colors';
+  showPage(initial);
+
+  document.querySelectorAll('.nav-link[data-page]').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      showPage(link.dataset.page);
+    });
+  });
+</script>
+
+</body>
+</html>

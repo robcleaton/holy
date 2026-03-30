@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Holy DS — Scrolling Banner</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    @font-face {
+      font-family: 'PP Agrandir';
+      font-weight: 400;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/PPAgrandir-Regular.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'PP Agrandir';
+      font-weight: 600;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/PPAgrandir-Medium.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'PP Agrandir';
+      font-weight: 700;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/PPAgrandir-Bold.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'PP Agrandir';
+      font-weight: 800;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/PPAgrandir-Heavy.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'PP Agrandir';
+      font-weight: 900;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/PPAgrandir-Black.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'ObviouslyNarrow';
+      font-weight: 900;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/ObviouslyNarrow-Black.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Instrument Sans';
+      font-weight: 400;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/instrumentsans_n4.db86542ae5e1596dbdb28c279ae6c2086c4c5bfa.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Instrument Sans';
+      font-weight: 600;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/instrumentsans_n6.27dc66245013a6f7f317d383a3cc9a0c347fb42d.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'ExtraChunkPlease';
+      font-weight: 400;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/ExtraChunkPlease-Regular.woff2') format('woff2');
+    }
+  </style>
+</head>
+<body class="page-body">
+
+<div class="page-header">
+      <div class="page-header-eyebrow">Components</div>
+      <h1>Scrolling Banner</h1>
+      <p>A horizontally looping marquee strip used to reinforce brand messaging, campaigns, or trust signals. Runs automatically on a continuous loop.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Default — Yellow</div>
+      <div class="demo-box">
+        <div class="demo-scroll-banner">
+          <div class="scroll-track">
+            <span class="scroll-item">Geiler Geschmack</span>
+            <span class="scroll-item">2 Mio. glückliche Kunden</span>
+            <span class="scroll-item">Jetzt starten</span>
+            <span class="scroll-item">Zero Bullsh*t</span>
+            <span class="scroll-item">Sommer im Shaker</span>
+            <span class="scroll-item">Geiler Geschmack</span>
+            <span class="scroll-item">2 Mio. glückliche Kunden</span>
+            <span class="scroll-item">Jetzt starten</span>
+            <span class="scroll-item">Zero Bullsh*t</span>
+            <span class="scroll-item">Sommer im Shaker</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Variant — Orange</div>
+      <div class="demo-box">
+        <div class="demo-scroll-banner" style="background:var(--color-nav);">
+          <div class="scroll-track">
+            <span class="scroll-item" style="color:white;">Kostenloser Versand ab 49 €</span>
+            <span class="scroll-item" style="color:white;">Gratis Shaker</span>
+            <span class="scroll-item" style="color:white;">Starter Pack sichern</span>
+            <span class="scroll-item" style="color:white;">Kostenloser Versand ab 49 €</span>
+            <span class="scroll-item" style="color:white;">Gratis Shaker</span>
+            <span class="scroll-item" style="color:white;">Starter Pack sichern</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Variant — Black</div>
+      <div class="demo-box">
+        <div class="demo-scroll-banner" style="background:var(--color-black);">
+          <div class="scroll-track">
+            <span class="scroll-item" style="color:white;">New Drop</span>
+            <span class="scroll-item" style="color:white;">Limited Edition</span>
+            <span class="scroll-item" style="color:white;">Holy Milkshake</span>
+            <span class="scroll-item" style="color:white;">New Drop</span>
+            <span class="scroll-item" style="color:white;">Limited Edition</span>
+            <span class="scroll-item" style="color:white;">Holy Milkshake</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Specs</div>
+      <div class="spec-row">
+        <span class="spec-tag highlight">Background: #FCBE00</span>
+        <span class="spec-tag">Font: ObviouslyNarrow 900 · uppercase</span>
+        <span class="spec-tag">Size: 16px</span>
+        <span class="spec-tag">Padding: 10px 0</span>
+        <span class="spec-tag">Separator: ★ star glyph</span>
+        <span class="spec-tag">Animation: infinite left scroll · 18s linear</span>
+      </div>
+    </div>
+
+</body>
+</html>

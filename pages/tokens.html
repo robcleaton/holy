@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Holy DS — Tokens</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    @font-face {
+      font-family: 'PP Agrandir';
+      font-weight: 400;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/PPAgrandir-Regular.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'PP Agrandir';
+      font-weight: 600;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/PPAgrandir-Medium.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'PP Agrandir';
+      font-weight: 700;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/PPAgrandir-Bold.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'PP Agrandir';
+      font-weight: 800;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/PPAgrandir-Heavy.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'PP Agrandir';
+      font-weight: 900;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/PPAgrandir-Black.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'ObviouslyNarrow';
+      font-weight: 900;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/ObviouslyNarrow-Black.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Instrument Sans';
+      font-weight: 400;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/instrumentsans_n4.db86542ae5e1596dbdb28c279ae6c2086c4c5bfa.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Instrument Sans';
+      font-weight: 600;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/instrumentsans_n6.27dc66245013a6f7f317d383a3cc9a0c347fb42d.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'ExtraChunkPlease';
+      font-weight: 400;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/ExtraChunkPlease-Regular.woff2') format('woff2');
+    }
+  </style>
+</head>
+<body class="page-body">
+
+<div class="page-header">
+      <div class="page-header-eyebrow">Foundations</div>
+      <h1>Design Tokens</h1>
+      <p>CSS custom properties defined as design tokens. These variables drive the entire visual system and should be used consistently across all components.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Color Tokens</div>
+      <div class="demo-box padded">
+        <table class="token-table">
+          <thead>
+            <tr><th>Token</th><th>Value</th><th>Swatch</th><th>Usage</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><code>--color-bg</code></td><td><code>#F3EDE1</code></td><td><span class="mini-swatch" style="background:#F3EDE1;"></span></td><td>Page background</td></tr>
+            <tr><td><code>--color-nav</code></td><td><code>#FF7748</code></td><td><span class="mini-swatch" style="background:#FF7748;"></span></td><td>Navigation background</td></tr>
+            <tr><td><code>--color-black</code></td><td><code>#000000</code></td><td><span class="mini-swatch" style="background:#000;"></span></td><td>Primary text</td></tr>
+            <tr><td><code>--color-white</code></td><td><code>#FFFFFF</code></td><td><span class="mini-swatch" style="background:#fff; border:1px solid #eee;"></span></td><td>Inverted text, cards</td></tr>
+            <tr><td><code>--color-btn-primary</code></td><td><code>#FFED28</code></td><td><span class="mini-swatch" style="background:#FFED28;"></span></td><td>Primary button</td></tr>
+            <tr><td><code>--color-btn-secondary</code></td><td><code>#FCB4D9</code></td><td><span class="mini-swatch" style="background:#FCB4D9;"></span></td><td>Secondary button</td></tr>
+            <tr><td><code>--color-btn-tertiary</code></td><td><code>#A4D9F6</code></td><td><span class="mini-swatch" style="background:#A4D9F6;"></span></td><td>Tertiary button</td></tr>
+            <tr><td><code>--color-btn-sage</code></td><td><code>#B3DBC4</code></td><td><span class="mini-swatch" style="background:#B3DBC4;"></span></td><td>Accent button</td></tr>
+            <tr><td><code>--color-yellow-bg</code></td><td><code>#FFEA23</code></td><td><span class="mini-swatch" style="background:#FFEA23;"></span></td><td>Product card background</td></tr>
+            <tr><td><code>--color-yellow-dark</code></td><td><code>#FCBE00</code></td><td><span class="mini-swatch" style="background:#FCBE00;"></span></td><td>Scrolling banner</td></tr>
+            <tr><td><code>--color-border</code></td><td><code>#CFCBBF</code></td><td><span class="mini-swatch" style="background:#CFCBBF;"></span></td><td>Borders, dividers</td></tr>
+            <tr><td><code>--color-muted</code></td><td><code>#999999</code></td><td><span class="mini-swatch" style="background:#999;"></span></td><td>Secondary text</td></tr>
+            <tr><td><code>--color-success</code></td><td><code>#2E9E7B</code></td><td><span class="mini-swatch" style="background:#2E9E7B;"></span></td><td>Success feedback</td></tr>
+            <tr><td><code>--color-error</code></td><td><code>#DE2A2A</code></td><td><span class="mini-swatch" style="background:#DE2A2A;"></span></td><td>Error feedback</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Typography Tokens</div>
+      <div class="demo-box padded">
+        <table class="token-table">
+          <thead>
+            <tr><th>Token</th><th>Value</th><th>Usage</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><code>--font-heading</code></td><td><code>'ObviouslyNarrow', sans-serif</code></td><td>H1–H3, product names, CTAs</td></tr>
+            <tr><td><code>--font-body</code></td><td><code>'PP Agrandir', sans-serif</code></td><td>Body copy, UI labels</td></tr>
+            <tr><td><code>--font-display</code></td><td><code>'ExtraChunkPlease', sans-serif</code></td><td>Hero accent text</td></tr>
+            <tr><td><code>--font-supporting</code></td><td><code>'Instrument Sans', sans-serif</code></td><td>Meta, captions, form labels</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+</body>
+</html>

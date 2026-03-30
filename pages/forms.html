@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Holy DS — Forms</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    @font-face {
+      font-family: 'PP Agrandir';
+      font-weight: 400;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/PPAgrandir-Regular.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'PP Agrandir';
+      font-weight: 600;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/PPAgrandir-Medium.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'PP Agrandir';
+      font-weight: 700;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/PPAgrandir-Bold.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'PP Agrandir';
+      font-weight: 800;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/PPAgrandir-Heavy.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'PP Agrandir';
+      font-weight: 900;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/PPAgrandir-Black.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'ObviouslyNarrow';
+      font-weight: 900;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/ObviouslyNarrow-Black.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Instrument Sans';
+      font-weight: 400;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/instrumentsans_n4.db86542ae5e1596dbdb28c279ae6c2086c4c5bfa.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Instrument Sans';
+      font-weight: 600;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/instrumentsans_n6.27dc66245013a6f7f317d383a3cc9a0c347fb42d.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'ExtraChunkPlease';
+      font-weight: 400;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/ExtraChunkPlease-Regular.woff2') format('woff2');
+    }
+  </style>
+</head>
+<body class="page-body">
+
+<div class="page-header">
+      <div class="page-header-eyebrow">Components</div>
+      <h1>Form Fields</h1>
+      <p>Inputs, selects, and form controls. All use 0px border radius and a 48px height to match the button system. Focus state uses a black border.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Text Input</div>
+      <div class="form-group">
+        <label class="form-label">Email Address</label>
+        <input class="form-input" type="email" placeholder="name@example.com">
+        <div class="form-hint">We'll only send you the good stuff.</div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Email — Focused (active)</label>
+        <input class="form-input" type="email" value="rob@example.com" style="border-color:#000;">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Email — Error</label>
+        <input class="form-input error" type="email" value="not-an-email">
+        <div class="form-hint error-text">Please enter a valid email address.</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Select</div>
+      <div class="form-group">
+        <label class="form-label">Portion Size</label>
+        <select class="form-select">
+          <option>50 Portionen — 24,99 €</option>
+          <option>10 Portionen — 8,99 €</option>
+          <option>1 Portion — 1,99 €</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Specs</div>
+      <div class="spec-row">
+        <span class="spec-tag highlight">Height: 48px</span>
+        <span class="spec-tag">Border: 1.5px solid #CFCBBF</span>
+        <span class="spec-tag">Border focus: 1.5px solid #000</span>
+        <span class="spec-tag">Border error: 1.5px solid #DE2A2A</span>
+        <span class="spec-tag">Padding: 0 16px</span>
+        <span class="spec-tag">Background: #FFFFFF</span>
+        <span class="spec-tag">Font: Instrument Sans 400 · 15px</span>
+        <span class="spec-tag">Radius: 0px</span>
+      </div>
+    </div>
+
+</body>
+</html>

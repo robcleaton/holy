@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Holy DS — Buttons</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    @font-face {
+      font-family: 'PP Agrandir';
+      font-weight: 400;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/PPAgrandir-Regular.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'PP Agrandir';
+      font-weight: 600;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/PPAgrandir-Medium.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'PP Agrandir';
+      font-weight: 700;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/PPAgrandir-Bold.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'PP Agrandir';
+      font-weight: 800;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/PPAgrandir-Heavy.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'PP Agrandir';
+      font-weight: 900;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/PPAgrandir-Black.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'ObviouslyNarrow';
+      font-weight: 900;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/ObviouslyNarrow-Black.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Instrument Sans';
+      font-weight: 400;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/instrumentsans_n4.db86542ae5e1596dbdb28c279ae6c2086c4c5bfa.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Instrument Sans';
+      font-weight: 600;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/instrumentsans_n6.27dc66245013a6f7f317d383a3cc9a0c347fb42d.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'ExtraChunkPlease';
+      font-weight: 400;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/ExtraChunkPlease-Regular.woff2') format('woff2');
+    }
+  </style>
+</head>
+<body class="page-body">
+
+<div class="page-header">
+      <div class="page-header-eyebrow">Components</div>
+      <h1>Buttons</h1>
+      <p>Two colour variants — Primary (yellow) and Secondary (pink). Corner radius scales with button size: XS buttons are nearly square, S is slightly rounded, and M through XL are fully pill-shaped. All use a 2px black border.</p>
+    </div>
+
+    <!-- PRIMARY -->
+    <div class="section">
+      <div class="section-title">Primary Buttons</div>
+
+      <div class="demo-label" style="margin-bottom:16px;">Sizes &amp; radius — filled / disabled / outlined</div>
+      <div style="display:flex;flex-direction:column;gap:20px;">
+
+        <!-- XS -->
+        <div style="display:flex;align-items:center;gap:16px;">
+          <span style="width:32px;font-size:11px;color:#999;font-family:'Instrument Sans',sans-serif;font-weight:600;text-transform:uppercase;">XS</span>
+          <button class="btn btn-primary btn-xs">Add to cart</button>
+          <button class="btn btn-xs btn-disabled" disabled>Add to cart</button>
+          <button class="btn btn-outline btn-xs">Add to cart</button>
+        </div>
+
+        <!-- S -->
+        <div style="display:flex;align-items:center;gap:16px;">
+          <span style="width:32px;font-size:11px;color:#999;font-family:'Instrument Sans',sans-serif;font-weight:600;text-transform:uppercase;">S</span>
+          <button class="btn btn-primary btn-s">Add to cart</button>
+          <button class="btn btn-s btn-disabled" disabled>Add to cart</button>
+          <button class="btn btn-outline btn-s">Add to cart</button>
+        </div>
+
+        <!-- M -->
+        <div style="display:flex;align-items:center;gap:16px;">
+          <span style="width:32px;font-size:11px;color:#999;font-family:'Instrument Sans',sans-serif;font-weight:600;text-transform:uppercase;">M</span>
+          <button class="btn btn-primary btn-m">Add to cart</button>
+          <button class="btn btn-m btn-disabled" disabled>Add to cart</button>
+          <button class="btn btn-outline btn-m">Add to cart</button>
+        </div>
+
+        <!-- L -->
+        <div style="display:flex;align-items:center;gap:16px;">
+          <span style="width:32px;font-size:11px;color:#999;font-family:'Instrument Sans',sans-serif;font-weight:600;text-transform:uppercase;">L</span>
+          <button class="btn btn-primary btn-l">Add to cart</button>
+          <button class="btn btn-l btn-disabled" disabled>Add to cart</button>
+          <button class="btn btn-outline btn-l">Add to cart</button>
+        </div>
+
+        <!-- XL -->
+        <div style="display:flex;align-items:center;gap:16px;">
+          <span style="width:32px;font-size:11px;color:#999;font-family:'Instrument Sans',sans-serif;font-weight:600;text-transform:uppercase;">XL</span>
+          <button class="btn btn-primary btn-xl">Add to cart</button>
+          <button class="btn btn-xl btn-disabled" disabled>Add to cart</button>
+          <button class="btn btn-outline btn-xl">Add to cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="demo-label" style="margin-bottom:16px;">With dismiss × on both ends</div>
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div style="display:flex;align-items:center;gap:16px;">
+          <span style="width:32px;font-size:11px;color:#999;font-family:'Instrument Sans',sans-serif;font-weight:600;text-transform:uppercase;">XS</span>
+          <button class="btn btn-primary btn-xs"><i class="btn-dismiss-icon">✕</i> Add to cart <i class="btn-dismiss-icon">✕</i></button>
+        </div>
+        <div style="display:flex;align-items:center;gap:16px;">
+          <span style="width:32px;font-size:11px;color:#999;font-family:'Instrument Sans',sans-serif;font-weight:600;text-transform:uppercase;">S</span>
+          <button class="btn btn-primary btn-s"><i class="btn-dismiss-icon">✕</i> Add to cart <i class="btn-dismiss-icon">✕</i></button>
+        </div>
+        <div style="display:flex;align-items:center;gap:16px;">
+          <span style="width:32px;font-size:11px;color:#999;font-family:'Instrument Sans',sans-serif;font-weight:600;text-transform:uppercase;">M</span>
+          <button class="btn btn-primary btn-m"><i class="btn-dismiss-icon" style="font-size:14px;">✕</i> Add to cart <i class="btn-dismiss-icon" style="font-size:14px;">✕</i></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="demo-label" style="margin-bottom:16px;">Icon-only — circular</div>
+      <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+        <button class="btn btn-primary btn-icon btn-xs">🛒</button>
+        <button class="btn btn-primary btn-icon btn-s">🛒</button>
+        <button class="btn btn-primary btn-icon btn-m">🛒</button>
+        <button class="btn btn-primary btn-icon btn-l">🛒</button>
+        <button class="btn btn-primary btn-icon btn-xl">🛒</button>
+        <button class="btn btn-disabled btn-icon btn-xs" disabled>🛒</button>
+        <button class="btn btn-disabled btn-icon btn-s" disabled>🛒</button>
+        <button class="btn btn-disabled btn-icon btn-m" disabled>🛒</button>
+        <button class="btn btn-disabled btn-icon btn-l" disabled>🛒</button>
+        <button class="btn btn-disabled btn-icon btn-xl" disabled>🛒</button>
+      </div>
+    </div>
+
+    <!-- SECONDARY -->
+    <div class="section" style="margin-top:48px;padding-top:40px;border-top:1px solid var(--color-border);">
+      <div class="section-title">Secondary Buttons</div>
+
+      <div class="demo-label" style="margin-bottom:16px;">Sizes &amp; radius — filled / disabled / outlined</div>
+      <div style="display:flex;flex-direction:column;gap:20px;">
+
+        <div style="display:flex;align-items:center;gap:16px;">
+          <span style="width:32px;font-size:11px;color:#999;font-family:'Instrument Sans',sans-serif;font-weight:600;text-transform:uppercase;">XS</span>
+          <button class="btn btn-secondary btn-xs">Add to cart</button>
+          <button class="btn btn-xs btn-disabled" disabled>Add to cart</button>
+          <button class="btn btn-outline btn-xs">Add to cart</button>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:16px;">
+          <span style="width:32px;font-size:11px;color:#999;font-family:'Instrument Sans',sans-serif;font-weight:600;text-transform:uppercase;">S</span>
+          <button class="btn btn-secondary btn-s">Add to cart</button>
+          <button class="btn btn-s btn-disabled" disabled>Add to cart</button>
+          <button class="btn btn-outline btn-s">Add to cart</button>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:16px;">
+          <span style="width:32px;font-size:11px;color:#999;font-family:'Instrument Sans',sans-serif;font-weight:600;text-transform:uppercase;">M</span>
+          <button class="btn btn-secondary btn-m">Add to cart</button>
+          <button class="btn btn-m btn-disabled" disabled>Add to cart</button>
+          <button class="btn btn-outline btn-m">Add to cart</button>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:16px;">
+          <span style="width:32px;font-size:11px;color:#999;font-family:'Instrument Sans',sans-serif;font-weight:600;text-transform:uppercase;">L</span>
+          <button class="btn btn-secondary btn-l">Add to cart</button>
+          <button class="btn btn-l btn-disabled" disabled>Add to cart</button>
+          <button class="btn btn-outline btn-l">Add to cart</button>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:16px;">
+          <span style="width:32px;font-size:11px;color:#999;font-family:'Instrument Sans',sans-serif;font-weight:600;text-transform:uppercase;">XL</span>
+          <button class="btn btn-secondary btn-xl">Add to cart</button>
+          <button class="btn btn-xl btn-disabled" disabled>Add to cart</button>
+          <button class="btn btn-outline btn-xl">Add to cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="demo-label" style="margin-bottom:16px;">With dismiss × on both ends</div>
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div style="display:flex;align-items:center;gap:16px;">
+          <span style="width:32px;font-size:11px;color:#999;font-family:'Instrument Sans',sans-serif;font-weight:600;text-transform:uppercase;">XS</span>
+          <button class="btn btn-secondary btn-xs"><i class="btn-dismiss-icon">✕</i> Add to cart <i class="btn-dismiss-icon">✕</i></button>
+        </div>
+        <div style="display:flex;align-items:center;gap:16px;">
+          <span style="width:32px;font-size:11px;color:#999;font-family:'Instrument Sans',sans-serif;font-weight:600;text-transform:uppercase;">S</span>
+          <button class="btn btn-secondary btn-s"><i class="btn-dismiss-icon">✕</i> Add to cart <i class="btn-dismiss-icon">✕</i></button>
+        </div>
+        <div style="display:flex;align-items:center;gap:16px;">
+          <span style="width:32px;font-size:11px;color:#999;font-family:'Instrument Sans',sans-serif;font-weight:600;text-transform:uppercase;">M</span>
+          <button class="btn btn-secondary btn-m"><i class="btn-dismiss-icon" style="font-size:14px;">✕</i> Add to cart <i class="btn-dismiss-icon" style="font-size:14px;">✕</i></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="demo-label" style="margin-bottom:16px;">Icon-only — circular</div>
+      <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+        <button class="btn btn-secondary btn-icon btn-xs">🛒</button>
+        <button class="btn btn-secondary btn-icon btn-s">🛒</button>
+        <button class="btn btn-secondary btn-icon btn-m">🛒</button>
+        <button class="btn btn-secondary btn-icon btn-l">🛒</button>
+        <button class="btn btn-secondary btn-icon btn-xl">🛒</button>
+        <button class="btn btn-disabled btn-icon btn-xs" disabled>🛒</button>
+        <button class="btn btn-disabled btn-icon btn-s" disabled>🛒</button>
+        <button class="btn btn-disabled btn-icon btn-m" disabled>🛒</button>
+        <button class="btn btn-disabled btn-icon btn-l" disabled>🛒</button>
+        <button class="btn btn-disabled btn-icon btn-xl" disabled>🛒</button>
+      </div>
+    </div>
+
+    <!-- SPECS -->
+    <div class="section" style="margin-top:48px;padding-top:40px;border-top:1px solid var(--color-border);">
+      <div class="section-title">Specs</div>
+      <div class="demo-box padded">
+        <table class="token-table">
+          <thead>
+            <tr><th>Size</th><th>Height</th><th>H. Padding</th><th>Border Radius</th><th>Font Size</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>XS</strong></td><td>32px</td><td>12px</td><td>4px — nearly square</td><td>11px</td></tr>
+            <tr><td><strong>S</strong></td><td>40px</td><td>16px</td><td>8px — slightly rounded</td><td>13px</td></tr>
+            <tr><td><strong>M</strong></td><td>52px</td><td>24px</td><td>100px — pill</td><td>14px</td></tr>
+            <tr><td><strong>L</strong></td><td>62px</td><td>32px</td><td>100px — pill</td><td>15px</td></tr>
+            <tr><td><strong>XL</strong></td><td>72px</td><td>40px</td><td>100px — pill</td><td>16px</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="spec-row" style="margin-top:16px;">
+        <span class="spec-tag highlight">Border: 2px solid #000</span>
+        <span class="spec-tag">Font: Instrument Sans 600 · uppercase · tracking 0.03em</span>
+        <span class="spec-tag">Primary fill: #FFED28</span>
+        <span class="spec-tag">Secondary fill: #FCB4D9</span>
+        <span class="spec-tag">Disabled: #BDBDBD fill + border · color #888</span>
+        <span class="spec-tag">Icon buttons: border-radius 50%</span>
+      </div>
+    </div>
+
+</body>
+</html>

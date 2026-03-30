@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Holy DS — Icons</title>
+  <link rel="stylesheet" href="../styles.css">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <style>
+    @font-face {
+      font-family: 'PP Agrandir';
+      font-weight: 400;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/PPAgrandir-Regular.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'PP Agrandir';
+      font-weight: 600;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/PPAgrandir-Medium.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'PP Agrandir';
+      font-weight: 700;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/PPAgrandir-Bold.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'PP Agrandir';
+      font-weight: 800;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/PPAgrandir-Heavy.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'PP Agrandir';
+      font-weight: 900;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/PPAgrandir-Black.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'ObviouslyNarrow';
+      font-weight: 900;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/ObviouslyNarrow-Black.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Instrument Sans';
+      font-weight: 400;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/instrumentsans_n4.db86542ae5e1596dbdb28c279ae6c2086c4c5bfa.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Instrument Sans';
+      font-weight: 600;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/instrumentsans_n6.27dc66245013a6f7f317d383a3cc9a0c347fb42d.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'ExtraChunkPlease';
+      font-weight: 400;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/ExtraChunkPlease-Regular.woff2') format('woff2');
+    }
+
+    /* ── Icon Library search bar ── */
+    .icon-search-bar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .icon-search-input {
+      flex: 1;
+      height: 40px;
+      padding: 0 14px;
+      border: 1px solid var(--border, #e5e7eb);
+      border-radius: 6px;
+      font-family: 'Instrument Sans', sans-serif;
+      font-size: 14px;
+      background: var(--bg-surface, #fff);
+      color: var(--text-primary, #111);
+      outline: none;
+    }
+    .icon-search-input:focus {
+      border-color: var(--text-primary, #111);
+    }
+    .icon-count {
+      font-size: 13px;
+      color: var(--text-secondary, #666);
+      white-space: nowrap;
+    }
+
+    /* ── Lucide icon grid ── */
+    .icon-lib-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+      gap: 4px;
+    }
+    .icon-lib-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 8px 12px;
+      border-radius: 8px;
+      cursor: default;
+      transition: background 0.12s;
+      min-width: 0;
+    }
+    .icon-lib-card:hover {
+      background: var(--bg-subtle, #f5f5f5);
+    }
+    .icon-lib-card svg {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      stroke: var(--text-primary, #111);
+      stroke-width: 1.5;
+    }
+    .icon-lib-name {
+      font-family: 'Instrument Sans', monospace;
+      font-size: 10px;
+      color: var(--text-secondary, #666);
+      text-align: center;
+      word-break: break-all;
+      line-height: 1.3;
+      width: 100%;
+    }
+    .icon-lib-card.hidden {
+      display: none;
+    }
+    .icon-lib-empty {
+      grid-column: 1 / -1;
+      padding: 40px 0;
+      text-align: center;
+      font-size: 14px;
+      color: var(--text-secondary, #666);
+    }
+  </style>
+</head>
+<body class="page-body">
+
+<div class="page-header">
+  <div class="page-header-eyebrow">Foundations</div>
+  <h1>Icons</h1>
+  <p>Holy uses two icon sets: large illustrated USP icons for feature callouts, and compact category icons for product classification. The UI Kit also includes a full Lucide icon library of 1,899 icons for general UI use.</p>
+</div>
+
+<!-- ── USP Icons ── -->
+<div class="section">
+  <h2 class="section-title">USP Icons</h2>
+  <p style="font-size:14px;color:#666;margin-bottom:24px;">Illustrated character icons used to communicate product benefits and USPs. Each icon is a 380×380 component.</p>
+  <div class="icon-grid">
+    <div class="icon-card">
+      <div class="icon-preview">
+        <img src="../icons/tasteDial.svg" alt="Taste Dial">
+      </div>
+      <div class="icon-card-info">
+        <div class="icon-name">Taste Dial</div>
+        <div class="icon-token">tasteDial</div>
+        <div class="icon-id">13275:552</div>
+      </div>
+    </div>
+    <div class="icon-card">
+      <div class="icon-preview">
+        <img src="../icons/vitamins.svg" alt="7 Vitamins">
+      </div>
+      <div class="icon-card-info">
+        <div class="icon-name">7 Vitamins</div>
+        <div class="icon-token">vitamins</div>
+        <div class="icon-id">13275:554</div>
+      </div>
+    </div>
+    <div class="icon-card">
+      <div class="icon-preview">
+        <img src="../icons/vitamins2.svg" alt="4 Vitamins">
+      </div>
+      <div class="icon-card-info">
+        <div class="icon-name">4 Vitamins</div>
+        <div class="icon-token">vitamins2</div>
+        <div class="icon-id">13275:582</div>
+      </div>
+    </div>
+    <div class="icon-card">
+      <div class="icon-preview">
+        <img src="../icons/austria.svg" alt="Made in Austria">
+      </div>
+      <div class="icon-card-info">
+        <div class="icon-name">Made in Austria</div>
+        <div class="icon-token">austria</div>
+        <div class="icon-id">13275:621</div>
+      </div>
+    </div>
+    <div class="icon-card">
+      <div class="icon-preview">
+        <img src="../icons/electrolytes.svg" alt="Electrolytes">
+      </div>
+      <div class="icon-card-info">
+        <div class="icon-name">Electrolytes</div>
+        <div class="icon-token">electrolytes</div>
+        <div class="icon-id">13275:644</div>
+      </div>
+    </div>
+    <div class="icon-card">
+      <div class="icon-preview">
+        <img src="../icons/newCaff.svg" alt="NewCaff">
+      </div>
+      <div class="icon-card-info">
+        <div class="icon-name">NewCaff</div>
+        <div class="icon-token">newCaff</div>
+        <div class="icon-id">13275:661</div>
+      </div>
+    </div>
+    <div class="icon-card">
+      <div class="icon-preview">
+        <img src="../icons/realTea.svg" alt="Real Tea">
+      </div>
+      <div class="icon-card-info">
+        <div class="icon-name">Real Tea</div>
+        <div class="icon-token">realTea</div>
+        <div class="icon-id">13275:671</div>
+      </div>
+    </div>
+    <div class="icon-card">
+      <div class="icon-preview">
+        <img src="../icons/containsFibres.svg" alt="Fibres">
+      </div>
+      <div class="icon-card-info">
+        <div class="icon-name">Fibres</div>
+        <div class="icon-token">containsFibres</div>
+        <div class="icon-id">13275:693</div>
+      </div>
+    </div>
+    <div class="icon-card">
+      <div class="icon-preview">
+        <img src="../icons/B-vitamins.svg" alt="B-Vitamins">
+      </div>
+      <div class="icon-card-info">
+        <div class="icon-name">B-Vitamins</div>
+        <div class="icon-token">B-vitamins</div>
+        <div class="icon-id">13275:716</div>
+      </div>
+    </div>
+    <div class="icon-card">
+      <div class="icon-preview">
+        <img src="../icons/keepsCold.svg" alt="Keeps Cold 12h">
+      </div>
+      <div class="icon-card-info">
+        <div class="icon-name">Keeps Cold 12h</div>
+        <div class="icon-token">keepsCold</div>
+        <div class="icon-id">13275:733</div>
+      </div>
+    </div>
+    <div class="icon-card">
+      <div class="icon-preview">
+        <img src="../icons/fruitConcentrate.svg" alt="Fruit Concentrate">
+      </div>
+      <div class="icon-card-info">
+        <div class="icon-name">Fruit Concentrate</div>
+        <div class="icon-token">fruitConcentrate</div>
+        <div class="icon-id">13275:743</div>
+      </div>
+    </div>
+    <div class="icon-card">
+      <div class="icon-preview">
+        <img src="../icons/thermoBottleSteel.svg" alt="Stainless Steel">
+      </div>
+      <div class="icon-card-info">
+        <div class="icon-name">Stainless Steel</div>
+        <div class="icon-token">thermoBottleSteel</div>
+        <div class="icon-id">13275:765</div>
+      </div>
+    </div>
+    <div class="icon-card">
+      <div class="icon-preview">
+        <img src="../icons/plasticShaker.svg" alt="500ml">
+      </div>
+      <div class="icon-card-info">
+        <div class="icon-name">500ml</div>
+        <div class="icon-token">plasticShaker</div>
+        <div class="icon-id">13275:788</div>
+      </div>
+    </div>
+    <div class="icon-card">
+      <div class="icon-preview">
+        <img src="../icons/thermoBottleVolume.svg" alt="700ml">
+      </div>
+      <div class="icon-card-info">
+        <div class="icon-name">700ml</div>
+        <div class="icon-token">thermoBottleVolume</div>
+        <div class="icon-id">13275:805</div>
+      </div>
+    </div>
+    <div class="icon-card">
+      <div class="icon-preview">
+        <img src="../icons/syrupBottleVolume.svg" alt="550ml">
+      </div>
+      <div class="icon-card-info">
+        <div class="icon-name">550ml</div>
+        <div class="icon-token">syrupBottleVolume</div>
+        <div class="icon-id">13275:815</div>
+      </div>
+    </div>
+    <div class="icon-card">
+      <div class="icon-preview">
+        <img src="../icons/zeroSugar.svg" alt="Zero Sugar">
+      </div>
+      <div class="icon-card-info">
+        <div class="icon-name">Zero Sugar</div>
+        <div class="icon-token">zeroSugar</div>
+        <div class="icon-id">13279:26</div>
+      </div>
+    </div>
+    <div class="icon-card">
+      <div class="icon-preview">
+        <img src="../icons/EU.svg" alt="Made in the EU">
+      </div>
+      <div class="icon-card-info">
+        <div class="icon-name">Made in the EU</div>
+        <div class="icon-token">EU</div>
+        <div class="icon-id">13303:74</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── Category Icons ── -->
+<div class="section">
+  <h2 class="section-title">Category Icons</h2>
+  <p style="font-size:14px;color:#666;margin-bottom:24px;">Compact icon + label components used to classify product categories. Each is a 354×98 horizontal tile.</p>
+  <div class="icon-grid icon-grid--category">
+    <div class="icon-card icon-card--category">
+      <div class="icon-preview icon-preview--sm">
+        <img src="../icons/newCaff.svg" alt="Energy">
+      </div>
+      <div class="icon-card-info">
+        <div class="icon-name">Energy</div>
+        <div class="icon-token">category=energy</div>
+        <div class="icon-id">13278:35</div>
+      </div>
+    </div>
+    <div class="icon-card icon-card--category">
+      <div class="icon-preview icon-preview--sm">
+        <img src="../icons/vitamins2.svg" alt="Milkshake">
+      </div>
+      <div class="icon-card-info">
+        <div class="icon-name">Milkshake</div>
+        <div class="icon-token">category=milkshake</div>
+        <div class="icon-id">13278:55</div>
+      </div>
+    </div>
+    <div class="icon-card icon-card--category">
+      <div class="icon-preview icon-preview--sm">
+        <img src="../icons/realTea.svg" alt="Iced Tea">
+      </div>
+      <div class="icon-card-info">
+        <div class="icon-name">Iced Tea</div>
+        <div class="icon-token">category=icedTea</div>
+        <div class="icon-id">13278:75</div>
+      </div>
+    </div>
+    <div class="icon-card icon-card--category">
+      <div class="icon-preview icon-preview--sm">
+        <img src="../icons/electrolytes.svg" alt="Hydration">
+      </div>
+      <div class="icon-card-info">
+        <div class="icon-name">Hydration</div>
+        <div class="icon-token">category=hydration</div>
+        <div class="icon-id">13278:95</div>
+      </div>
+    </div>
+    <div class="icon-card icon-card--category">
+      <div class="icon-preview icon-preview--sm">
+        <img src="../icons/syrupBottleVolume.svg" alt="Syrup">
+      </div>
+      <div class="icon-card-info">
+        <div class="icon-name">Syrup</div>
+        <div class="icon-token">category=syrup</div>
+        <div class="icon-id">13278:115</div>
+      </div>
+    </div>
+    <div class="icon-card icon-card--category">
+      <div class="icon-preview icon-preview--sm">
+        <img src="../icons/syrupBottleVolume.svg" alt="Syrup Bottle">
+      </div>
+      <div class="icon-card-info">
+        <div class="icon-name">Syrup Bottle</div>
+        <div class="icon-token">category=syrupBottle</div>
+        <div class="icon-id">13278:135</div>
+      </div>
+    </div>
+    <div class="icon-card icon-card--category">
+      <div class="icon-preview icon-preview--sm">
+        <img src="../icons/thermoBottleSteel.svg" alt="Thermo Shaker">
+      </div>
+      <div class="icon-card-info">
+        <div class="icon-name">Thermo Shaker</div>
+        <div class="icon-token">category=thermoShaker</div>
+        <div class="icon-id">13278:155</div>
+      </div>
+    </div>
+    <div class="icon-card icon-card--category">
+      <div class="icon-preview icon-preview--sm">
+        <img src="../icons/plasticShaker.svg" alt="Plastic Shaker">
+      </div>
+      <div class="icon-card-info">
+        <div class="icon-name">Plastic Shaker</div>
+        <div class="icon-token">category=plasticShaker</div>
+        <div class="icon-id">13278:175</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── Lucide Icon Library ── -->
+<div class="section">
+  <h2 class="section-title">Icon Library</h2>
+  <p style="font-size:14px;color:#666;margin-bottom:20px;">Full Lucide icon set included in the HOLY UI Kit. All icons are 16×16 components (Figma node 13412:61). Use in code via <code style="font-size:12px;background:#f3f4f6;padding:2px 5px;border-radius:3px;">import { IconName } from 'lucide-react'</code>.</p>
+
+  <div class="icon-search-bar">
+    <input
+      type="search"
+      class="icon-search-input"
+      id="icon-search"
+      placeholder="Search 1,899 icons…"
+      autocomplete="off"
+      spellcheck="false"
+    >
+    <span class="icon-count" id="icon-count">1,899 icons</span>
+  </div>
+
+  <div class="icon-lib-grid" id="icon-lib-grid"></div>
+</div>
+
+<!-- ── Usage Notes ── -->
+<div class="section">
+  <h2 class="section-title">Usage Notes</h2>
+  <div style="display:flex;flex-direction:column;gap:12px;">
+    <div class="spec-row">
+      <span class="spec-tag highlight">USP icons</span>
+      <span class="spec-tag">380 × 380px native size</span>
+      <span class="spec-tag">Figma component: Property 1=&lt;name&gt;</span>
+    </div>
+    <div class="spec-row">
+      <span class="spec-tag highlight">Category icons</span>
+      <span class="spec-tag">354 × 98px native size</span>
+      <span class="spec-tag">Figma component: category=&lt;name&gt;</span>
+    </div>
+    <div class="spec-row">
+      <span class="spec-tag highlight">Icon library</span>
+      <span class="spec-tag">16 × 16px</span>
+      <span class="spec-tag">Lucide — Figma node 13412:61</span>
+    </div>
+    <div class="spec-row">
+      <span class="spec-tag">File: HOLY UI Kit</span>
+      <span class="spec-tag">File key: NuocO6HuTv7oVTHBhyTjjf</span>
+    </div>
+  </div>
+</div>
+
+<script>
+  const ICONS = ["a-arrow-down","a-arrow-up","a-large-small","accessibility","activity-square","activity","air-vent","airplay","alarm-check","alarm-clock-check","alarm-clock-minus","alarm-clock-off","alarm-clock-plus","alarm-clock","alarm-minus","alarm-plus","alarm-smoke","album","alert-circle","alert-octagon","alert-triangle","align-center-horizontal","align-center-vertical","align-center","align-end-horizontal","align-end-vertical","align-horizontal-distribute-center","align-horizontal-distribute-end","align-horizontal-distribute-start","align-horizontal-justify-center","align-horizontal-justify-end","align-horizontal-justify-start","align-horizontal-space-around","align-horizontal-space-between","align-justify","align-left","align-right","align-start-horizontal","align-start-vertical","align-vertical-distribute-center","align-vertical-distribute-end","align-vertical-distribute-start","align-vertical-justify-center","align-vertical-justify-end","align-vertical-justify-start","align-vertical-space-around","align-vertical-space-between","ambulance","ampersand","ampersands","anchor","angry","annoyed","antenna","anvil","aperture","apple","archive-restore","archive-x","archive","armchair","arrow-big-down-dash","arrow-big-down","arrow-big-left-dash","arrow-big-left","arrow-big-right-dash","arrow-big-right","arrow-big-up-dash","arrow-big-up","arrow-down-0-1","arrow-down-1-0","arrow-down-a-z","arrow-down-az","arrow-down-from-line","arrow-down-left","arrow-down-narrow-wide","arrow-down-right","arrow-down-to-dot","arrow-down-to-line","arrow-down-up","arrow-down-wide-narrow","arrow-down-z-a","arrow-down-za","arrow-down","arrow-left-from-line","arrow-left-right","arrow-left-to-line","arrow-left","arrow-right-from-line","arrow-right-left","arrow-right-to-line","arrow-right","arrow-up-0-1","arrow-up-1-0","arrow-up-a-z","arrow-up-az","arrow-up-from-dot","arrow-up-from-line","arrow-up-left","arrow-up-narrow-wide","arrow-up-right","arrow-up-to-line","arrow-up-wide-narrow","arrow-up-z-a","arrow-up-za","arrow-up","arrows-up-from-line","asterisk","at-sign","atom","audio-lines","audio-waveform","award","axe","axis-3d","baby","backpack","badge-alert","badge-cent","badge-check","badge-dollar-sign","badge-euro","badge-help","badge-indian-rupee","badge-info","badge-japanese-yen","badge-minus","badge-percent","badge-plus","badge-pound-sterling","badge-russian-ruble","badge-swiss-franc","badge-x","badge","baggage-claim","ban","banana","banknote-arrow-down","banknote-x","banknote","bar-chart-2","bar-chart-3","bar-chart-4","bar-chart-big","bar-chart-horizontal-big","bar-chart-horizontal","bar-chart","barcode","baseline","bath","battery-charging","battery-full","battery-high","battery-low","battery-medium","battery-warning","battery","beaker","beef-off","beef","beer-off","beer","bell-dot","bell-electric","bell-minus","bell-off","bell-plus","bell-ring","bell","between-horizonal-end","between-horizonal-start","between-horizontal-end","between-horizontal-start","between-vertical-end","between-vertical-start","biceps-flexed","bike","binary","binoculars","biohazard","bird","birdhouse","bitcoin","blend","blinds","blocks","bluetooth-connected","bluetooth-off","bluetooth-searching","bluetooth","bold","bolt","bomb","bone","book-a","book-alert","book-audio","book-check","book-copy","book-dashed","book-down","book-headphones","book-heart","book-image","book-key","book-lock","book-marked","book-minus","book-open-check","book-open-text","book-open","book-plus","book-search","book-template","book-text","book-type","book-up-2","book-up","book-user","book-x","book","bookmark-check","bookmark-minus","bookmark-plus","bookmark-x","bookmark","boom-box","bot-message-square","bot-off","bot","bottle-wine","bow-arrow","box-select","box","boxes","braces","brackets","brain-circuit","brain-cog","brain","brick-wall-fire","brick-wall-shield","brick-wall","briefcase-business","briefcase-conveyor-belt","briefcase-medical","briefcase","bring-to-front","brush-cleaning","brush","bubbles","bug-off","bug-play","bug","building-2","building","bus-front","bus","cable-car","cable","cake-slice","cake","calculator","calendar-1","calendar-arrow-down","calendar-arrow-up","calendar-check-2","calendar-check","calendar-clock","calendar-cog","calendar-days","calendar-fold","calendar-heart","calendar-minus-2","calendar-minus","calendar-off","calendar-plus-2","calendar-plus","calendar-range","calendar-search","calendar-sync","calendar-x-2","calendar-x","calendar","calendars","camera-off","camera","candlestick-chart","candy-cane","candy-off","candy","cannabis-off","cannabis","captions-off","captions","car-front","car-taxi-front","car","caravan","card-sim","carrot","case-lower","case-sensitive","case-upper","cassette-tape","cast","castle","cat","cctv-off","cctv","chart-area","chart-bar-big","chart-bar-decreasing","chart-bar-increasing","chart-bar-stacked","chart-bar","chart-candlestick","chart-column-big","chart-column-decreasing","chart-column-increasing","chart-column-stacked","chart-column","chart-gantt","chart-line","chart-network","chart-no-axes-column-decreasing","chart-no-axes-column-increasing","chart-no-axes-column","chart-no-axes-combined","chart-no-axes-gantt","chart-pie","chart-scatter","chart-spline","check-check","check-circle-2","check-circle","check-line","check-square-2","check-square","check","chef-hat","cherry","chess-bishop","chess-king","chess-knight","chess-pawn","chess-queen","chess-rook","chevron-down-circle","chevron-down-square","chevron-down","chevron-first","chevron-last","chevron-left-circle","chevron-left-square","chevron-left","chevron-right-circle","chevron-right-square","chevron-right","chevron-up-circle","chevron-up-square","chevron-up","chevrons-down-up","chevrons-down","chevrons-left-right-ellipsis","chevrons-left-right","chevrons-left","chevrons-right-left","chevrons-right","chevrons-up-down","chevrons-up","church","cigarette-off","cigarette","circle-alert","circle-arrow-down","circle-arrow-left","circle-arrow-out-down-left","circle-arrow-out-down-right","circle-arrow-out-up-left","circle-arrow-out-up-right","circle-arrow-right","circle-arrow-up","circle-check-big","circle-check","circle-chevron-down","circle-chevron-left","circle-chevron-right","circle-chevron-up","circle-dashed","circle-divide","circle-dollar-sign","circle-dot-dashed","circle-dot","circle-ellipsis","circle-equal","circle-fading-arrow-up","circle-fading-plus","circle-gauge","circle-help","circle-minus","circle-off","circle-parking-off","circle-parking","circle-pause","circle-percent","circle-pile","circle-play","circle-plus","circle-pound-sterling","circle-power","circle-question-mark","circle-slash-2","circle-slash","circle-slashed","circle-small","circle-star","circle-stop","circle-user-round","circle-user","circle-x","circle","circuit-board","citrus","clapperboard","clipboard-check","clipboard-clock","clipboard-copy","clipboard-edit","clipboard-list","clipboard-minus","clipboard-paste","clipboard-pen-line","clipboard-pen","clipboard-plus","clipboard-signature","clipboard-type","clipboard-x","clipboard","clock-1","clock-10","clock-11","clock-12","clock-2","clock-3","clock-4","clock-5","clock-6","clock-7","clock-8","clock-9","clock-alert","clock-arrow-down","clock-arrow-up","clock-check","clock-fading","clock-plus","clock","closed-caption","cloud-alert","cloud-backup","cloud-check","cloud-cog","cloud-download","cloud-drizzle","cloud-fog","cloud-hail","cloud-lightning","cloud-moon-rain","cloud-moon","cloud-off","cloud-rain-wind","cloud-rain","cloud-snow","cloud-sun-rain","cloud-sun","cloud-sync","cloud-upload","cloud","cloudy","clover","club","code-2","code-square","code-xml","code","coffee","cog","coins","columns-2","columns-3-cog","columns-3","columns-4","columns-settings","columns","combine","command","compass","component","computer","concierge-bell","cone","construction","contact-2","contact-round","contact","container","contrast","cookie","cooking-pot","copy-check","copy-minus","copy-plus","copy-slash","copy-x","copy","copyleft","copyright","corner-down-left","corner-down-right","corner-left-down","corner-left-up","corner-right-down","corner-right-up","corner-up-left","corner-up-right","cpu","creative-commons","credit-card","croissant","crop","cross","crosshair","crown","cuboid","cup-soda","curly-braces","currency","cylinder","dam","database-backup","database-search","database-zap","database","decimals-arrow-left","decimals-arrow-right","delete","dessert","diameter","diamond-minus","diamond-percent","diamond-plus","diamond","dice-1","dice-2","dice-3","dice-4","dice-5","dice-6","dices","diff","disc-2","disc-3","disc-album","disc","divide-circle","divide-square","divide","dna-off","dna","dock","dog","dollar-sign","donut","door-closed-locked","door-closed","door-open","dot-square","dot","download-cloud","download","drafting-compass","drama","drill","drone","droplet-off","droplet","droplets","drum","drumstick","dumbbell","ear-off","ear","earth-lock","earth","eclipse","edit-2","edit-3","edit","egg-fried","egg-off","egg","ellipse","ellipsis-vertical","ellipsis","equal-approximately","equal-not","equal-square","equal","eraser","ethernet-port","euro","ev-charger","expand","external-link","eye-closed","eye-off","eye","factory","fan","fast-forward","feather","fence","ferris-wheel","file-archive","file-audio-2","file-audio","file-axis-3-d","file-axis-3d","file-badge-2","file-badge","file-bar-chart-2","file-bar-chart","file-box","file-braces-corner","file-braces","file-chart-column-increasing","file-chart-column","file-chart-line","file-chart-pie","file-check-2","file-check-corner","file-check","file-clock","file-code-2","file-code-corner","file-code","file-cog-2","file-cog","file-diff","file-digit","file-down","file-edit","file-exclamation-point","file-headphone","file-heart","file-image","file-input","file-json-2","file-json","file-key-2","file-key","file-line-chart","file-lock-2","file-lock","file-minus-2","file-minus-corner","file-minus","file-music","file-output","file-pen-line","file-pen","file-pie-chart","file-play","file-plus-2","file-plus-corner","file-plus","file-question-mark","file-question","file-scan","file-search-2","file-search-corner","file-search","file-signal","file-signature","file-sliders","file-spreadsheet","file-stack","file-symlink","file-terminal","file-text","file-type-2","file-type-corner","file-type","file-up","file-user","file-video-2","file-video-camera","file-video","file-volume-2","file-volume","file-warning","file-x-2","file-x-corner","file-x","file","files","film","filter-x","filter","fingerprint-pattern","fingerprint","fire-extinguisher","fish-off","fish-symbol","fish","fishing-hook","fishing-rod","flag-off","flag-triangle-left","flag-triangle-right","flag","flame-kindling","flame","flashlight-off","flashlight","flask-conical-off","flask-conical","flask-round","flip-horizontal-2","flip-horizontal","flip-vertical-2","flip-vertical","flower-2","flower","focus","fold-horizontal","fold-vertical","folder-archive","folder-check","folder-clock","folder-closed","folder-code","folder-cog-2","folder-cog","folder-dot","folder-down","folder-edit","folder-git-2","folder-git","folder-heart","folder-input","folder-kanban","folder-key","folder-lock","folder-minus","folder-open-dot","folder-open","folder-output","folder-pen","folder-plus","folder-root","folder-search-2","folder-search","folder-symlink","folder-sync","folder-tree","folder-up","folder-x","folder","folders","footprints","fork-knife-crossed","fork-knife","forklift","form-input","form","forward","frame","frown","fuel","fullscreen","function-square","funnel-plus","funnel-x","funnel","gallery-horizontal-end","gallery-horizontal","gallery-thumbnails","gallery-vertical-end","gallery-vertical","gamepad-2","gamepad-directional","gamepad","gantt-chart-square","gantt-chart","gauge-circle","gauge","gavel","gem","georgian-lari","ghost","gift","git-branch-minus","git-branch-plus","git-branch","git-commit-horizontal","git-commit-vertical","git-commit","git-compare-arrows","git-compare","git-fork","git-graph","git-merge-conflict","git-merge","git-pull-request-arrow","git-pull-request-closed","git-pull-request-create-arrow","git-pull-request-create","git-pull-request-draft","git-pull-request","glass-water","glasses","globe-2","globe-lock","globe-off","globe-x","globe","goal","gpu","grab","graduation-cap","grape","grid-2-x-2-check","grid-2-x-2-plus","grid-2-x-2-x","grid-2-x-2","grid-2x2-check","grid-2x2-plus","grid-2x2-x","grid-2x2","grid-3-x-3","grid-3x2","grid-3x3","grid","grip-horizontal","grip-vertical","grip","group","guitar","ham","hamburger","hammer","hand-coins","hand-fist","hand-grab","hand-heart","hand-helping","hand-metal","hand-platter","hand","handbag","handshake","hard-drive-download","hard-drive-upload","hard-drive","hard-hat","hash","hat-glasses","haze","hd","hdmi-port","heading-1","heading-2","heading-3","heading-4","heading-5","heading-6","heading","headphone-off","headphones","headset","heart-crack","heart-handshake","heart-minus","heart-off","heart-plus","heart-pulse","heart","heater","helicopter","help-circle","helping-hand","hexagon","highlighter","history","home","hop-off","hop","hospital","hotel","hourglass","house-heart","house-plug","house-plus","house-wifi","house","ice-cream-2","ice-cream-bowl","ice-cream-cone","ice-cream","id-card-lanyard","id-card","image-down","image-minus","image-off","image-play","image-plus","image-up","image-upscale","image","images","import","inbox","indent-decrease","indent-increase","indent","indian-rupee","infinity","info","inspect","inspection-panel","italic","iteration-ccw","iteration-cw","japanese-yen","joystick","kanban-square-dashed","kanban-square","kanban","kayak","key-round","key-square","key","keyboard-music","keyboard-off","keyboard","lamp-ceiling","lamp-desk","lamp-floor","lamp-wall-down","lamp-wall-up","lamp","land-plot","landmark","languages","laptop-2","laptop-minimal-check","laptop-minimal","laptop","lasso-select","lasso","laugh","layers-2","layers-3","layers-plus","layers","layout-dashboard","layout-grid","layout-list","layout-panel-left","layout-panel-top","layout-template","layout","leaf","leafy-green","lectern","lens-concave","lens-convex","letter-text","library-big","library-square","library","life-buoy","ligature","lightbulb-off","lightbulb","line-chart","line-dot-right-horizontal","line-squiggle","line-style","link-2-off","link-2","link","list-check","list-checks","list-chevrons-down-up","list-chevrons-up-down","list-collapse","list-end","list-filter-plus","list-filter","list-indent-decrease","list-indent-increase","list-minus","list-music","list-ordered","list-plus","list-restart","list-start","list-todo","list-tree","list-video","list-x","list","loader-2","loader-circle","loader-pinwheel","loader","locate-fixed","locate-off","locate","location-edit","lock-keyhole-open","lock-keyhole","lock-open","lock","log-in","log-out","logs","lollipop","luggage","m-square","magnet","mail-check","mail-minus","mail-open","mail-plus","mail-question-mark","mail-question","mail-search","mail-warning","mail-x","mail","mailbox","mails","map-minus","map-pin-check-inside","map-pin-check","map-pin-house","map-pin-minus-inside","map-pin-minus","map-pin-off","map-pin-pen","map-pin-plus-inside","map-pin-plus","map-pin-search","map-pin-x-inside","map-pin-x","map-pin","map-pinned","map-plus","map","mars-stroke","mars","martini","maximize-2","maximize","medal","megaphone-off","megaphone","meh","memory-stick","menu-square","menu","merge","message-circle-check","message-circle-code","message-circle-dashed","message-circle-heart","message-circle-more","message-circle-off","message-circle-plus","message-circle-question-mark","message-circle-question","message-circle-reply","message-circle-warning","message-circle-x","message-circle","message-square-check","message-square-code","message-square-dashed","message-square-diff","message-square-dot","message-square-heart","message-square-lock","message-square-more","message-square-off","message-square-plus","message-square-quote","message-square-reply","message-square-share","message-square-text","message-square-warning","message-square-x","message-square","messages-square","metronome","mic-2","mic-off","mic-vocal","mic","microchip","microscope","microwave","milestone","milk-off","milk","minimize-2","minimize","minus-circle","minus-square","minus","mirror-rectangular","mirror-round","monitor-check","monitor-cloud","monitor-cog","monitor-dot","monitor-down","monitor-off","monitor-pause","monitor-play","monitor-smartphone","monitor-speaker","monitor-stop","monitor-up","monitor-x","monitor","moon-star","moon","more-horizontal","more-vertical","motorbike","mountain-snow","mountain","mouse-left","mouse-off","mouse-pointer-2-off","mouse-pointer-2","mouse-pointer-ban","mouse-pointer-click","mouse-pointer-square-dashed","mouse-pointer","mouse-right","mouse","move-3-d","move-3d","move-diagonal-2","move-diagonal","move-down-left","move-down-right","move-down","move-horizontal","move-left","move-right","move-up-left","move-up-right","move-up","move-vertical","move","music-2","music-3","music-4","music","navigation-2-off","navigation-2","navigation-off","navigation","network","newspaper","nfc","non-binary","notebook-pen","notebook-tabs","notebook-text","notebook","notepad-text-dashed","notepad-text","nut-off","nut","octagon-alert","octagon-minus","octagon-pause","octagon-x","octagon","omega","option","orbit","origami","outdent","package-2","package-check","package-minus","package-open","package-plus","package-search","package-x","package","paint-bucket","paint-roller","paintbrush-2","paintbrush-vertical","paintbrush","palette","palmtree","panda","panel-bottom-close","panel-bottom-dashed","panel-bottom-inactive","panel-bottom-open","panel-bottom","panel-left-close","panel-left-dashed","panel-left-inactive","panel-left-open","panel-left-right-dashed","panel-left","panel-right-close","panel-right-dashed","panel-right-inactive","panel-right-open","panel-right","panel-top-bottom-dashed","panel-top-close","panel-top-dashed","panel-top-inactive","panel-top-open","panel-top","panels-left-bottom","panels-left-right","panels-right-bottom","panels-top-bottom","panels-top-left","paperclip","parentheses","parking-circle-off","parking-circle","parking-meter","parking-square-off","parking-square","party-popper","pause-circle","pause-octagon","pause","paw-print","pc-case","pen-box","pen-line","pen-off","pen-square","pen-tool","pen","pencil-line","pencil-off","pencil-ruler","pencil","pentagon","percent-circle","percent-diamond","percent-square","percent","person-standing","philippine-peso","phone-call","phone-forwarded","phone-incoming","phone-missed","phone-off","phone-outgoing","phone","pi-square","pi","piano","pickaxe","picture-in-picture-2","picture-in-picture","pie-chart","piggy-bank","pilcrow-left","pilcrow-right","pilcrow-square","pilcrow","pill-bottle","pill","pin-off","pin","pipette","pizza","plane-landing","plane-takeoff","plane","play-circle","play-square","play","plug-2","plug-zap-2","plug-zap","plug","plus-circle","plus-square","plus","pocket-knife","podcast","pointer-off","pointer","popcorn","popsicle","pound-sterling","power-circle","power-off","power-square","power","presentation","printer-check","printer-x","printer","projector","proportions","puzzle","pyramid","qr-code","quote","rabbit","radar","radiation","radical","radio-off","radio-receiver","radio-tower","radio","radius","rainbow","rat","ratio","receipt-cent","receipt-euro","receipt-indian-rupee","receipt-japanese-yen","receipt-pound-sterling","receipt-russian-ruble","receipt-swiss-franc","receipt-text","receipt-turkish-lira","receipt","rectangle-circle","rectangle-ellipsis","rectangle-goggles","rectangle-horizontal","rectangle-vertical","recycle","redo-2","redo-dot","redo","refresh-ccw-dot","refresh-ccw","refresh-cw-off","refresh-cw","refrigerator","regex","remove-formatting","repeat-1","repeat-2","repeat","replace-all","replace","reply-all","reply","rewind","ribbon","road","rocket","rocking-chair","roller-coaster","rose","rotate-3-d","rotate-3d","rotate-ccw-key","rotate-ccw-square","rotate-ccw","rotate-cw-square","rotate-cw","route-off","route","router","rows-2","rows-3","rows-4","rows","rss","ruler-dimension-line","ruler","russian-ruble","sailboat","salad","sandwich","satellite-dish","satellite","saudi-riyal","save-all","save-off","save","scale-3-d","scale-3d","scale","scaling","scan-barcode","scan-eye","scan-face","scan-heart","scan-line","scan-qr-code","scan-search","scan-text","scan","scatter-chart","school-2","school","scissors-line-dashed","scissors-square-dashed-bottom","scissors-square","scissors","scooter","screen-share-off","screen-share","scroll-text","scroll","search-alert","search-check","search-code","search-slash","search-x","search","section","send-horizonal","send-horizontal","send-to-back","send","separator-horizontal","separator-vertical","server-cog","server-crash","server-off","server","settings-2","settings","shapes","share-2","share","sheet","shell","shelving-unit","shield-alert","shield-ban","shield-check","shield-close","shield-cog-corner","shield-cog","shield-ellipsis","shield-half","shield-minus","shield-off","shield-plus","shield-question-mark","shield-question","shield-user","shield-x","shield","ship-wheel","ship","shirt","shopping-bag","shopping-basket","shopping-cart","shovel","shower-head","shredder","shrimp","shrink","shrub","shuffle","sidebar-close","sidebar-open","sidebar","sigma-square","sigma","signal-high","signal-low","signal-medium","signal-zero","signal","signature","signpost-big","signpost","siren","skip-back","skip-forward","skull","slash-square","slash","slice","sliders-horizontal","sliders-vertical","sliders","smartphone-charging","smartphone-nfc","smartphone","smile-plus","smile","snail","snowflake","soap-dispenser-droplet","sofa","solar-panel","sort-asc","sort-desc","soup","space","spade","sparkle","sparkles","speaker","speech","spell-check-2","spell-check","spline-pointer","spline","split-square-horizontal","split-square-vertical","split","spool","sport-shoe","spotlight","spray-can","sprout","square-activity","square-arrow-down-left","square-arrow-down-right","square-arrow-down","square-arrow-left","square-arrow-out-down-left","square-arrow-out-down-right","square-arrow-out-up-left","square-arrow-out-up-right","square-arrow-right-enter","square-arrow-right-exit","square-arrow-right","square-arrow-up-left","square-arrow-up-right","square-arrow-up","square-asterisk","square-bottom-dashed-scissors","square-centerline-dashed-horizontal","square-centerline-dashed-vertical","square-chart-gantt","square-check-big","square-check","square-chevron-down","square-chevron-left","square-chevron-right","square-chevron-up","square-code","square-dashed-bottom-code","square-dashed-bottom","square-dashed-kanban","square-dashed-mouse-pointer","square-dashed-top-solid","square-dashed","square-divide","square-dot","square-equal","square-function","square-gantt-chart","square-kanban","square-library","square-m","square-menu","square-minus","square-mouse-pointer","square-parking-off","square-parking","square-pause","square-pen","square-percent","square-pi","square-pilcrow","square-play","square-plus","square-power","square-radical","square-round-corner","square-scissors","square-sigma","square-slash","square-split-horizontal","square-split-vertical","square-square","square-stack","square-star","square-stop","square-terminal","square-user-round","square-user","square-x","square","squares-exclude","squares-intersect","squares-subtract","squares-unite","squircle-dashed","squircle","squirrel","stamp","star-half","star-off","star","stars","step-back","step-forward","stethoscope","sticker","sticky-note","stone","stop-circle","store","stretch-horizontal","stretch-vertical","strikethrough","subscript","subtitles","sun-dim","sun-medium","sun-moon","sun-snow","sun","sunrise","sunset","superscript","swatch-book","swiss-franc","switch-camera","sword","swords","syringe","table-2","table-cells-merge","table-cells-split","table-columns-split","table-config","table-of-contents","table-properties","table-rows-split","table","tablet-smartphone","tablet","tablets","tag","tags","tally-1","tally-2","tally-3","tally-4","tally-5","tangent","target","telescope","tent-tree","tent","terminal-square","terminal","test-tube-2","test-tube-diagonal","test-tube","test-tubes","text-align-center","text-align-end","text-align-justify","text-align-start","text-cursor-input","text-cursor","text-initial","text-quote","text-search","text-select","text-selection","text-wrap","text","theater","thermometer-snowflake","thermometer-sun","thermometer","thumbs-down","thumbs-up","ticket-check","ticket-minus","ticket-percent","ticket-plus","ticket-slash","ticket-x","ticket","tickets-plane","tickets","timer-off","timer-reset","timer","toggle-left","toggle-right","toilet","tool-case","toolbox","tornado","torus","touchpad-off","touchpad","towel-rack","tower-control","toy-brick","tractor","traffic-cone","train-front-tunnel","train-front","train-track","train","tram-front","transgender","trash-2","trash","tree-deciduous","tree-palm","tree-pine","trees","trending-down","trending-up-down","trending-up","triangle-alert","triangle-dashed","triangle-right","triangle","trophy","truck-electric","truck","turkish-lira","turntable","turtle","tv-2","tv-minimal-play","tv-minimal","tv","type-outline","type","umbrella-off","umbrella","underline","undo-2","undo-dot","undo","unfold-horizontal","unfold-vertical","ungroup","university","unlink-2","unlink","unlock-keyhole","unlock","unplug","upload-cloud","upload","usb","user-2","user-check-2","user-check","user-circle-2","user-circle","user-cog-2","user-cog","user-key","user-lock","user-minus-2","user-minus","user-pen","user-plus-2","user-plus","user-round-check","user-round-cog","user-round-key","user-round-minus","user-round-pen","user-round-plus","user-round-search","user-round-x","user-round","user-search","user-square-2","user-square","user-star","user-x-2","user-x","user","users-2","users-round","users","utensils-crossed","utensils","utility-pole","van","variable","vault","vector-square","vegan","venetian-mask","venus-and-mars","venus","verified","vibrate-off","vibrate","video-off","video","videotape","view","voicemail","volleyball","volume-1","volume-2","volume-off","volume-x","volume","vote","wallet-2","wallet-cards","wallet-minimal","wallet","wallpaper","wand-2","wand-sparkles","wand","warehouse","washing-machine","watch","waves-arrow-down","waves-arrow-up","waves-ladder","waves","waypoints","webcam","webhook-off","webhook","weight-tilde","weight","wheat-off","wheat","whole-word","wifi-cog","wifi-high","wifi-low","wifi-off","wifi-pen","wifi-sync","wifi-zero","wifi","wind-arrow-down","wind","wine-off","wine","workflow","worm","wrap-text","wrench","x-circle","x-line-top","x-octagon","x-square","x","zap-off","zap","zodiac-aquarius","zodiac-aries","zodiac-cancer","zodiac-capricorn","zodiac-gemini","zodiac-leo","zodiac-libra","zodiac-ophiuchus","zodiac-pisces","zodiac-sagittarius","zodiac-scorpio","zodiac-taurus","zodiac-virgo","zoom-in","zoom-out"];
+
+  function toPascal(str) {
+    return str.split('-').map(p => p.charAt(0).toUpperCase() + p.slice(1)).join('');
+  }
+
+  const grid = document.getElementById('icon-lib-grid');
+  const searchInput = document.getElementById('icon-search');
+  const countEl = document.getElementById('icon-count');
+
+  // Build all cards up front
+  const cards = ICONS.map(name => {
+    const card = document.createElement('div');
+    card.className = 'icon-lib-card';
+    card.dataset.name = name;
+
+    const iconWrap = document.createElement('div');
+    const i = document.createElement('i');
+    i.setAttribute('data-lucide', name);
+    iconWrap.appendChild(i);
+
+    const label = document.createElement('div');
+    label.className = 'icon-lib-name';
+    label.textContent = name;
+
+    card.appendChild(iconWrap);
+    card.appendChild(label);
+    return card;
+  });
+
+  cards.forEach(c => grid.appendChild(c));
+
+  // Render all Lucide icons
+  if (window.lucide) {
+    lucide.createIcons();
+  }
+
+  // Search/filter
+  let debounceTimer;
+  searchInput.addEventListener('input', () => {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(() => {
+      const q = searchInput.value.trim().toLowerCase();
+      let visible = 0;
+      cards.forEach(card => {
+        const match = !q || card.dataset.name.includes(q);
+        card.classList.toggle('hidden', !match);
+        if (match) visible++;
+      });
+
+      // Show/hide empty state
+      let emptyEl = grid.querySelector('.icon-lib-empty');
+      if (visible === 0) {
+        if (!emptyEl) {
+          emptyEl = document.createElement('div');
+          emptyEl.className = 'icon-lib-empty';
+          grid.appendChild(emptyEl);
+        }
+        emptyEl.textContent = `No icons matching "${searchInput.value.trim()}"`;
+      } else if (emptyEl) {
+        emptyEl.remove();
+      }
+
+      countEl.textContent = q
+        ? `${visible.toLocaleString()} of ${ICONS.length.toLocaleString()} icons`
+        : `${ICONS.length.toLocaleString()} icons`;
+    }, 120);
+  });
+</script>
+
+</body>
+</html>

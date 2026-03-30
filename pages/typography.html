@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Holy DS — Typography</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    @font-face {
+      font-family: 'PP Agrandir';
+      font-weight: 400;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/PPAgrandir-Regular.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'PP Agrandir';
+      font-weight: 600;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/PPAgrandir-Medium.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'PP Agrandir';
+      font-weight: 700;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/PPAgrandir-Bold.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'PP Agrandir';
+      font-weight: 800;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/PPAgrandir-Heavy.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'PP Agrandir';
+      font-weight: 900;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/PPAgrandir-Black.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'ObviouslyNarrow';
+      font-weight: 900;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/ObviouslyNarrow-Black.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Instrument Sans';
+      font-weight: 400;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/instrumentsans_n4.db86542ae5e1596dbdb28c279ae6c2086c4c5bfa.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Instrument Sans';
+      font-weight: 600;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/instrumentsans_n6.27dc66245013a6f7f317d383a3cc9a0c347fb42d.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'ExtraChunkPlease';
+      font-weight: 400;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/ExtraChunkPlease-Regular.woff2') format('woff2');
+    }
+  </style>
+</head>
+<body class="page-body">
+
+<div class="page-header">
+      <div class="page-header-eyebrow">Foundations</div>
+      <h1>Typography</h1>
+      <p>Holy uses three typefaces: <strong>PP Agrandir</strong> (font-family-1) for body, headings and UI, <strong>ObviouslyNarrow</strong> (font-family-2) for condensed display, and <strong>ExtraChunkPlease</strong> (font-family-3) for decorative accent display. All sizes are responsive — desktop shown first, mobile in parentheses.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Typefaces</div>
+      <div class="demo-box padded" style="margin-bottom:20px;">
+        <table class="token-table">
+          <thead>
+            <tr><th>Token</th><th>Family</th><th>Weights used</th><th>Role</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><code>--font-family-1</code></td><td>PP Agrandir</td><td>400, 600, 700, 800</td><td>Body, headings, labels, captions</td></tr>
+            <tr><td><code>--font-family-2</code></td><td>ObviouslyNarrow</td><td>800, 900</td><td>Condensed display &amp; headings</td></tr>
+            <tr><td><code>--font-family-3</code></td><td>ExtraChunkPlease</td><td>900</td><td>Decorative hero display</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ── DISPLAY (font-family-2) ── -->
+    <div class="section">
+      <div class="section-title">Display — ObviouslyNarrow</div>
+
+      <div class="type-specimen">
+        <div class="type-meta"><span class="type-label">.display-xxl</span><div class="type-divider"></div></div>
+        <div class="display-xxl">SOFT DRINK REVOLUTION</div>
+        <div class="type-detail">ObviouslyNarrow · 900 · 140px / 80px · line-height .8</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-meta"><span class="type-label">.display-xl</span><div class="type-divider"></div></div>
+        <div class="display-xl">SOFT DRINK REVOLUTION</div>
+        <div class="type-detail">ObviouslyNarrow · 900 · 110px / 55px · line-height .8</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-meta"><span class="type-label">.display-l</span><div class="type-divider"></div></div>
+        <div class="display-l">SOFT DRINK REVOLUTION</div>
+        <div class="type-detail">ObviouslyNarrow · 900 · 80px / 44px · line-height 72px / 40px</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-meta"><span class="type-label">.display-m</span><div class="type-divider"></div></div>
+        <div class="display-m">SOFT DRINK REVOLUTION</div>
+        <div class="type-detail">ObviouslyNarrow · 900 · 60px / 36px · line-height 56px / 32px</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-meta"><span class="type-label">.display-s</span><div class="type-divider"></div></div>
+        <div class="display-s">SOFT DRINK REVOLUTION</div>
+        <div class="type-detail">ObviouslyNarrow · 900 · 48px / 28px · line-height 46px / 26px</div>
+      </div>
+    </div>
+
+    <!-- ── DISPLAY FONT-3 (ExtraChunkPlease) ── -->
+    <div class="section">
+      <div class="section-title">Display — ExtraChunkPlease</div>
+
+      <div class="type-specimen">
+        <div class="type-meta"><span class="type-label">.display-xxl-font-3</span><div class="type-divider"></div></div>
+        <div class="display-xxl-font-3">SOFT DRINK REVOLUTION</div>
+        <div class="type-detail">ExtraChunkPlease · 900 · 158px / 80px · line-height .84 / .85</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-meta"><span class="type-label">.display-xl-font-3</span><div class="type-divider"></div></div>
+        <div class="display-xl-font-3">SOFT DRINK REVOLUTION</div>
+        <div class="type-detail">ExtraChunkPlease · 900 · 110px / 55px · line-height 80px / 40px</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-meta"><span class="type-label">.display-l-font-3</span><div class="type-divider"></div></div>
+        <div class="display-l-font-3">SOFT DRINK REVOLUTION</div>
+        <div class="type-detail">ExtraChunkPlease · 900 · 80px / 44px · line-height 72px / 40px</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-meta"><span class="type-label">.display-m-font-3</span><div class="type-divider"></div></div>
+        <div class="display-m-font-3">SOFT DRINK REVOLUTION</div>
+        <div class="type-detail">ExtraChunkPlease · 900 · 60px / 36px · line-height 56px / 32px</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-meta"><span class="type-label">.display-s-font-3</span><div class="type-divider"></div></div>
+        <div class="display-s-font-3">SOFT DRINK REVOLUTION</div>
+        <div class="type-detail">ExtraChunkPlease · 900 · 48px / 28px · line-height 46px / 26px</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-meta"><span class="type-label">.display-xs-font-3</span><div class="type-divider"></div></div>
+        <div class="display-xs-font-3">SOFT DRINK REVOLUTION</div>
+        <div class="type-detail">ExtraChunkPlease · 900 · 36px / 28px · line-height 40px / 26px</div>
+      </div>
+    </div>
+
+    <!-- ── HEADING ── -->
+    <div class="section">
+      <div class="section-title">Heading</div>
+
+      <div class="type-specimen">
+        <div class="type-meta"><span class="type-label">.heading-xl</span><div class="type-divider"></div></div>
+        <div class="heading-xl">Holy Iced Tea</div>
+        <div class="type-detail">PP Agrandir · 700 · 32px / 24px · line-height 40px / 26px</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-meta"><span class="type-label">.heading-l</span><div class="type-divider"></div></div>
+        <div class="heading-l">Holy Iced Tea</div>
+        <div class="type-detail">PP Agrandir · 900 · 32px / 24px · line-height 1</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-meta"><span class="type-label">.heading-l-small-case</span><div class="type-divider"></div></div>
+        <div class="heading-l-small-case">Holy Iced Tea</div>
+        <div class="type-detail">ObviouslyNarrow · 900 · 32px / 24px · line-height 34px / 24px</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-meta"><span class="type-label">.heading-l-small-case-alternate</span><div class="type-divider"></div></div>
+        <div class="heading-l-small-case-alternate">Holy Iced Tea</div>
+        <div class="type-detail">ObviouslyNarrow · 800 · 32px / 24px · line-height 34px / 24px</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-meta"><span class="type-label">.heading-m</span><div class="type-divider"></div></div>
+        <div class="heading-m">Holy Iced Tea</div>
+        <div class="type-detail">ObviouslyNarrow · 900 · 24px / 18px · line-height 26px / 24px · tracking -.24px</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-meta"><span class="type-label">.heading-s</span><div class="type-divider"></div></div>
+        <div class="heading-s">Holy Iced Tea</div>
+        <div class="type-detail">PP Agrandir · 700 · 18px / 16px · line-height 20px / 18px</div>
+      </div>
+    </div>
+
+    <!-- ── BODY ── -->
+    <div class="section">
+      <div class="section-title">Body</div>
+
+      <div class="type-specimen">
+        <div class="type-meta"><span class="type-label">.body-l-strong</span><div class="type-divider"></div></div>
+        <div class="body-l-strong">Our 30-day Satisfaction Guarantee</div>
+        <div class="type-detail">PP Agrandir · 800 · 24px / 18px · line-height 32px / 22px</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-meta"><span class="type-label">.body-l</span><div class="type-divider"></div></div>
+        <div class="body-l">Are you looking for a tasty &amp; healthier alternative to conventional energy drinks?</div>
+        <div class="type-detail">PP Agrandir · 400 · 24px / 18px · line-height 32px / 22px</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-meta"><span class="type-label">.body-m-strong</span><div class="type-divider"></div></div>
+        <div class="body-m-strong">Our 30-day Satisfaction Guarantee</div>
+        <div class="type-detail">PP Agrandir · 700 · 16px / 14px · line-height 20px / 18px</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-meta"><span class="type-label">.body-m</span><div class="type-divider"></div></div>
+        <div class="body-m">Are you looking for a tasty &amp; healthier alternative to conventional energy drinks?</div>
+        <div class="type-detail">PP Agrandir · 400 · 16px / 14px · line-height 20px / 18px</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-meta"><span class="type-label">.body-s-strong</span><div class="type-divider"></div></div>
+        <div class="body-s-strong">Our 30-day Satisfaction Guarantee</div>
+        <div class="type-detail">PP Agrandir · 700 · 14px / 12px · line-height 18px / 16px</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-meta"><span class="type-label">.body-s</span><div class="type-divider"></div></div>
+        <div class="body-s">Are you looking for a tasty &amp; healthier alternative to conventional energy drinks?</div>
+        <div class="type-detail">PP Agrandir · 400 · 14px / 12px · line-height 18px / 16px</div>
+      </div>
+    </div>
+
+    <!-- ── LABEL ── -->
+    <div class="section">
+      <div class="section-title">Label</div>
+
+      <div class="type-specimen">
+        <div class="type-meta"><span class="type-label">.label-l</span><div class="type-divider"></div></div>
+        <div class="label-l">Add to Cart</div>
+        <div class="type-detail">PP Agrandir · 400 · 18px / 16px · line-height 20px / 18px</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-meta"><span class="type-label">.label-l-underline</span><div class="type-divider"></div></div>
+        <div class="label-l-underline">Add to Cart</div>
+        <div class="type-detail">PP Agrandir · 700 · 20px / 18px · line-height 26px / 24px · underline</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-meta"><span class="type-label">.label-m</span><div class="type-divider"></div></div>
+        <div class="label-m">Add to Cart</div>
+        <div class="type-detail">PP Agrandir · 700 · 16px / 14px · line-height 20px / 18px</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-meta"><span class="type-label">.label-m-underline</span><div class="type-divider"></div></div>
+        <div class="label-m-underline">Add to Cart</div>
+        <div class="type-detail">PP Agrandir · 700 · 16px / 14px · line-height 20px / 18px · underline</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-meta"><span class="type-label">.label-m-regular</span><div class="type-divider"></div></div>
+        <div class="label-m-regular">Add to Cart</div>
+        <div class="type-detail">PP Agrandir · 400 · 16px / 14px · line-height 20px / 18px</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-meta"><span class="type-label">.label-m-bold</span><div class="type-divider"></div></div>
+        <div class="label-m-bold">Add to Cart</div>
+        <div class="type-detail">PP Agrandir · 700 · 16px / 14px · line-height 20px / 18px</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-meta"><span class="type-label">.label-m-heavy</span><div class="type-divider"></div></div>
+        <div class="label-m-heavy">Add to Cart</div>
+        <div class="type-detail">PP Agrandir · 800 · 16px / 14px · line-height 20px / 18px</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-meta"><span class="type-label">.label-s</span><div class="type-divider"></div></div>
+        <div class="label-s">Create an account</div>
+        <div class="type-detail">PP Agrandir · 700 · 14px / 12px · line-height 18px / 16px</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-meta"><span class="type-label">.label-xs</span><div class="type-divider"></div></div>
+        <div class="label-xs">Back to login</div>
+        <div class="type-detail">PP Agrandir · 700 · 11px / 9px · line-height 14px / 12px · tracking 0.5px</div>
+      </div>
+    </div>
+
+    <!-- ── CAPTION ── -->
+    <div class="section">
+      <div class="section-title">Caption</div>
+
+      <div class="type-specimen">
+        <div class="type-meta"><span class="type-label">.caption-m</span><div class="type-divider"></div></div>
+        <div class="caption-m">Our customer service for questions and objections is available on weekdays from 8:30 a.m. to 5:30 p.m.</div>
+        <div class="type-detail">PP Agrandir · 400 · 14px / 12px · line-height 14px / 12px</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-meta"><span class="type-label">.caption-m-strong</span><div class="type-divider"></div></div>
+        <div class="caption-m-strong">Our customer service for questions and objections is available on weekdays from 8:30 a.m. to 5:30 p.m.</div>
+        <div class="type-detail">PP Agrandir · 700 · 14px / 12px · line-height 14px / 12px</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-meta"><span class="type-label">.caption-s</span><div class="type-divider"></div></div>
+        <div class="caption-s">We confirm receipt of the order immediately by means of an automatically generated e-mail ("order confirmation").</div>
+        <div class="type-detail">PP Agrandir · 600 · 11px / 9px · line-height 14px / 12px · tracking 0.5px</div>
+      </div>
+    </div>
+
+</body>
+</html>
