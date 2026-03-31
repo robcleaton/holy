@@ -4,71 +4,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Holy DS — Breakpoints</title>
-  <link rel="stylesheet" href="../styles.css">
-  <style>
-    @font-face {
-      font-family: 'PP Agrandir';
-      font-weight: 400;
-      font-style: normal;
-      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/PPAgrandir-Regular.woff2') format('woff2');
-    }
-    @font-face {
-      font-family: 'PP Agrandir';
-      font-weight: 600;
-      font-style: normal;
-      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/PPAgrandir-Medium.woff2') format('woff2');
-    }
-    @font-face {
-      font-family: 'PP Agrandir';
-      font-weight: 700;
-      font-style: normal;
-      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/PPAgrandir-Bold.woff2') format('woff2');
-    }
-    @font-face {
-      font-family: 'PP Agrandir';
-      font-weight: 800;
-      font-style: normal;
-      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/PPAgrandir-Heavy.woff2') format('woff2');
-    }
-    @font-face {
-      font-family: 'PP Agrandir';
-      font-weight: 900;
-      font-style: normal;
-      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/PPAgrandir-Black.woff2') format('woff2');
-    }
-    @font-face {
-      font-family: 'ObviouslyNarrow';
-      font-weight: 900;
-      font-style: normal;
-      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/ObviouslyNarrow-Black.woff2') format('woff2');
-    }
-    @font-face {
-      font-family: 'Instrument Sans';
-      font-weight: 400;
-      font-style: normal;
-      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/instrumentsans_n4.db86542ae5e1596dbdb28c279ae6c2086c4c5bfa.woff2') format('woff2');
-    }
-    @font-face {
-      font-family: 'Instrument Sans';
-      font-weight: 600;
-      font-style: normal;
-      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/instrumentsans_n6.27dc66245013a6f7f317d383a3cc9a0c347fb42d.woff2') format('woff2');
-    }
-    @font-face {
-      font-family: 'ExtraChunkPlease';
-      font-weight: 400;
-      font-style: normal;
-      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/ExtraChunkPlease-Regular.woff2') format('woff2');
-    }
-  </style>
+  <script src="/components/head.js"></script>
 </head>
-<body class="page-body">
+<body>
+<main class="main">
+<div class="page-body">
 
 <div class="page-header">
   <div class="page-header-eyebrow">Foundations</div>
   <h1>Breakpoints</h1>
-  <p>640 / 740 / 1000 / 1200</p>
 </div>
 
+    <div class="section">
+      <div class="section-title">Breakpoints</div>
+      <div class="breakpoint-bar">
+        <div class="bp-seg" style="background:#2a2a2a; flex: 741;">Mobile <br><span style="opacity:.5">0–741px</span></div>
+        <div class="bp-seg" style="background:#FF7748; flex: 259;">Tablet <br><span style="opacity:.6">741–1000px</span></div>
+        <div class="bp-seg" style="background:#e85f2e; flex: 200;">Laptop <br><span style="opacity:.6">1000–1200px</span></div>
+        <div class="bp-seg" style="background:#cc4a1f; flex: 400;">Desktop <br><span style="opacity:.6">1200–1600px</span></div>
+        <div class="bp-seg" style="background:#a83612; flex: 200;">Wide <br><span style="opacity:.6">1600px+</span></div>
+      </div>
+      <div class="demo-box padded">
+        <table class="token-table">
+          <thead>
+            <tr><th>Breakpoint</th><th>Width</th><th>Columns</th><th>Gutter</th><th>Max Container</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Mobile</td><td>0 – 740px</td><td>10</td><td>20px</td><td>100%</td></tr>
+            <tr><td>Tablet</td><td>741 – 999px</td><td>12</td><td>24px</td><td>100%</td></tr>
+            <tr><td>Laptop</td><td>1000 – 1199px</td><td>20</td><td>32px</td><td>100%</td></tr>
+            <tr><td>Desktop</td><td>1200 – 1599px</td><td>20</td><td>40px</td><td>1600px</td></tr>
+            <tr><td>Wide</td><td>1600px+</td><td>20</td><td>40px</td><td>1600px centered</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+</div>
+</main>
+<script src="/components/sidebar.js"></script>
 </body>
 </html>
