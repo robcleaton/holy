@@ -44,7 +44,7 @@
       inset: 0;
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
       pointer-events: none;
     }
 
@@ -64,6 +64,25 @@
       color: #666;
       font-family: 'SF Mono', 'Fira Code', monospace;
     }
+
+    /* ── Syrup download button ── */
+    .dl-btn {
+      display: block;
+      width: 100%;
+      text-decoration: none;
+      text-align: center;
+      margin-top: 8px;
+      padding: 5px 0;
+      font-size: 11px;
+      font-weight: 600;
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: 3px;
+      cursor: pointer;
+      color: #333;
+      transition: background 0.1s;
+    }
+    .dl-btn:hover { background: #f5f5f5; }
   </style>
 </head>
 <body>
@@ -685,6 +704,145 @@
   </div>
 </div>
 
+<!-- ── Syrup ── -->
+<div class="section">
+  <h2 class="section-title">Syrup</h2>
+  <p style="font-size:14px;color:#666;margin-bottom:20px;">10 Syrup flavours. Illustrated character sticker icons on brand-colour backgrounds.</p>
+  <div class="flavour-grid">
+
+    <div class="flavour-card">
+      <div class="flavour-preview" style="background:#BDEAA6;">
+        <div class="flavour-icon">
+          <img src="../assets/syrup/elderflower-lime.svg" alt="Elderflower Lime">
+        </div>
+      </div>
+      <div class="flavour-card-info">
+        <div class="flavour-name">Elderflower Lime</div>
+        <div class="flavour-token">category=syrup</div>
+        <a class="dl-btn" href="../assets/syrup/elderflower-lime.svg" download="syrup-elderflower-lime.svg">Download</a>
+      </div>
+    </div>
+
+    <div class="flavour-card">
+      <div class="flavour-preview" style="background:#F3BEC4;">
+        <div class="flavour-icon">
+          <img src="../assets/syrup/grapefruit.svg" alt="Grapefruit">
+        </div>
+      </div>
+      <div class="flavour-card-info">
+        <div class="flavour-name">Grapefruit</div>
+        <div class="flavour-token">category=syrup</div>
+        <a class="dl-btn" href="../assets/syrup/grapefruit.svg" download="syrup-grapefruit.svg">Download</a>
+      </div>
+    </div>
+
+    <div class="flavour-card">
+      <div class="flavour-preview" style="background:#FFAEB6;">
+        <div class="flavour-icon">
+          <img src="../assets/syrup/strawberry.svg" alt="Strawberry">
+        </div>
+      </div>
+      <div class="flavour-card-info">
+        <div class="flavour-name">Strawberry</div>
+        <div class="flavour-token">category=syrup</div>
+        <a class="dl-btn" href="../assets/syrup/strawberry.svg" download="syrup-strawberry.svg">Download</a>
+      </div>
+    </div>
+
+    <div class="flavour-card">
+      <div class="flavour-preview" style="background:#FFC387;">
+        <div class="flavour-icon">
+          <img src="../assets/syrup/tangerine-yuzu.svg" alt="Tangerine Yuzu">
+        </div>
+      </div>
+      <div class="flavour-card-info">
+        <div class="flavour-name">Tangerine Yuzu</div>
+        <div class="flavour-token">category=syrup</div>
+        <a class="dl-btn" href="../assets/syrup/tangerine-yuzu.svg" download="syrup-tangerine-yuzu.svg">Download</a>
+      </div>
+    </div>
+
+    <div class="flavour-card">
+      <div class="flavour-preview" style="background:#DFF0AE;">
+        <div class="flavour-icon">
+          <img src="../assets/syrup/green-apple.svg" alt="Green Apple">
+        </div>
+      </div>
+      <div class="flavour-card-info">
+        <div class="flavour-name">Green Apple</div>
+        <div class="flavour-token">category=syrup</div>
+        <a class="dl-btn" href="../assets/syrup/green-apple.svg" download="syrup-green-apple.svg">Download</a>
+      </div>
+    </div>
+
+    <div class="flavour-card">
+      <div class="flavour-preview" style="background:#FFDAA5;">
+        <div class="flavour-icon">
+          <img src="../assets/syrup/mango.svg" alt="Mango">
+        </div>
+      </div>
+      <div class="flavour-card-info">
+        <div class="flavour-name">Mango</div>
+        <div class="flavour-token">category=syrup</div>
+        <a class="dl-btn" href="../assets/syrup/mango.svg" download="syrup-mango.svg">Download</a>
+      </div>
+    </div>
+
+    <div class="flavour-card">
+      <div class="flavour-preview" style="background:#F6ACA4;">
+        <div class="flavour-icon">
+          <img src="../assets/syrup/pomegranate.svg" alt="Pomegranate">
+        </div>
+      </div>
+      <div class="flavour-card-info">
+        <div class="flavour-name">Pomegranate</div>
+        <div class="flavour-token">category=syrup</div>
+        <a class="dl-btn" href="../assets/syrup/pomegranate.svg" download="syrup-pomegranate.svg">Download</a>
+      </div>
+    </div>
+
+    <div class="flavour-card">
+      <div class="flavour-preview" style="background:#F99EC7;">
+        <div class="flavour-icon">
+          <img src="../assets/syrup/raspberry.svg" alt="Raspberry">
+        </div>
+      </div>
+      <div class="flavour-card-info">
+        <div class="flavour-name">Raspberry</div>
+        <div class="flavour-token">category=syrup</div>
+        <a class="dl-btn" href="../assets/syrup/raspberry.svg" download="syrup-raspberry.svg">Download</a>
+      </div>
+    </div>
+
+    <div class="flavour-card">
+      <div class="flavour-preview" style="background:#FFC9B4;">
+        <div class="flavour-icon">
+          <img src="../assets/syrup/peach.svg" alt="Peach">
+        </div>
+      </div>
+      <div class="flavour-card-info">
+        <div class="flavour-name">Peach</div>
+        <div class="flavour-token">category=syrup</div>
+        <a class="dl-btn" href="../assets/syrup/peach.svg" download="syrup-peach.svg">Download</a>
+      </div>
+    </div>
+
+    <div class="flavour-card">
+      <div class="flavour-preview" style="background:#DA9F7B;">
+        <div class="flavour-icon">
+          <img src="../assets/syrup/cola-ice-pop.svg" alt="Cola Ice Pop">
+        </div>
+      </div>
+      <div class="flavour-card-info">
+        <div class="flavour-name">Cola Ice Pop</div>
+        <div class="flavour-token">category=syrup</div>
+        <a class="dl-btn" href="../assets/syrup/cola-ice-pop.svg" download="syrup-cola-ice-pop.svg">Download</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 <!-- ── Usage Notes ── -->
 <div class="section">
   <h2 class="section-title">Usage Notes</h2>
@@ -713,6 +871,11 @@
       <span class="spec-tag highlight">Milkshake</span>
       <span class="spec-tag">5 flavours</span>
       <span class="spec-tag">Single-image icons</span>
+    </div>
+    <div class="spec-row">
+      <span class="spec-tag highlight">Syrup</span>
+      <span class="spec-tag">10 flavours</span>
+      <span class="spec-tag">Character sticker icons on brand backgrounds</span>
     </div>
     <div class="spec-row">
       <span class="spec-tag">File: HOLY UI Kit</span>
