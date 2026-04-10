@@ -16,9 +16,9 @@
 
       <div class="nav-group">
         <span class="nav-group-label">Foundations</span>
+        <a class="nav-link" href="${base}pages/typography.html"><span class="nav-dot"></span> Typography</a>
         <a class="nav-link" href="${base}pages/colors.html"><span class="nav-dot"></span> Colors</a>
         <a class="nav-link" href="${base}pages/product-colours.html" style="padding-left:28px;font-size:13px;"><span class="nav-dot"></span> Product Colours</a>
-        <a class="nav-link" href="${base}pages/typography.html"><span class="nav-dot"></span> Typography</a>
         <a class="nav-link" href="${base}pages/spacing.html"><span class="nav-dot"></span> Spacing &amp; Grid</a>
         <a class="nav-link" href="${base}pages/tokens.html"><span class="nav-dot"></span> Design Tokens</a>
         <a class="nav-link" href="${base}pages/icons.html"><span class="nav-dot"></span> Icons</a>
@@ -27,7 +27,7 @@
         <a class="nav-link" href="${base}pages/breakpoints.html"><span class="nav-dot"></span> Breakpoints</a>
       </div>
 
-      <div class="nav-group">
+      <!-- <div class="nav-group">
         <span class="nav-group-label">Components</span>
         <a class="nav-link" href="${base}pages/announcement-bar.html"><span class="nav-dot"></span> Announcement Bar</a>
         <a class="nav-link" href="${base}pages/header.html"><span class="nav-dot"></span> Header &amp; Nav</a>
@@ -42,7 +42,7 @@
         <a class="nav-link" href="${base}pages/trust-bar.html"><span class="nav-dot"></span> Trust Bar</a>
         <a class="nav-link" href="${base}pages/country-selector.html"><span class="nav-dot"></span> Country Selector</a>
         <a class="nav-link" href="${base}pages/footer.html"><span class="nav-dot"></span> Footer</a>
-      </div>
+      </div> -->
     </nav>
   `;
 
