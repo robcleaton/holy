@@ -1,7 +1,21 @@
 (function () {
   // Derive the repo root from this script's own URL so the site works at any
   // host path (e.g. GitHub Pages at /holy/ as well as localhost:3000/).
-  const base = new URL('../', document.currentScript.src).href;
+  const scriptSrc = document.currentScript && document.currentScript.src;
+  const base = scriptSrc
+    ? new URL('../', scriptSrc).href
+    : location.href.replace(/\/pages\/[^/]*$/, '/').replace(/\/[^/]*\.html$/, '/');
+
+  // Determine the active page — strip .html so it works whether or not the
+  // local server drops the extension (e.g. /pages/typography vs /pages/typography.html).
+  const currentPath = location.pathname.toLowerCase().replace(/\.html$/, '');
+
+  function navLink(path, label, extraStyle) {
+    const isActive = currentPath.endsWith(path.toLowerCase().replace(/\.html$/, ''));
+    const cls = 'nav-link' + (isActive ? ' active' : '');
+    const styleAttr = extraStyle ? ' style="' + extraStyle + '"' : '';
+    return '<a class="' + cls + '" href="' + base + path + '"' + styleAttr + '><span class="nav-dot"></span> ' + label + '</a>';
+  }
 
   const html = `
     <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
@@ -16,15 +30,15 @@
 
       <div class="nav-group">
         <span class="nav-group-label">Foundations</span>
-        <a class="nav-link" href="${base}pages/typography.html"><span class="nav-dot"></span> Typography</a>
-        <a class="nav-link" href="${base}pages/colors.html"><span class="nav-dot"></span> Colors</a>
-        <a class="nav-link" href="${base}pages/product-colours.html" style="padding-left:28px;font-size:13px;"><span class="nav-dot"></span> Product Colours</a>
-        <a class="nav-link" href="${base}pages/spacing.html"><span class="nav-dot"></span> Spacing &amp; Grid</a>
-        <a class="nav-link" href="${base}pages/tokens.html"><span class="nav-dot"></span> Design Tokens</a>
-        <a class="nav-link" href="${base}pages/icons.html"><span class="nav-dot"></span> Icons</a>
-        <a class="nav-link" href="${base}pages/flavour-icons.html" style="padding-left:28px;font-size:13px;"><span class="nav-dot"></span> Flavour Icons</a>
-        <a class="nav-link" href="${base}pages/usp-icons.html" style="padding-left:28px;font-size:13px;"><span class="nav-dot"></span> USP Icons</a>
-        <a class="nav-link" href="${base}pages/breakpoints.html"><span class="nav-dot"></span> Breakpoints</a>
+        ${navLink('pages/typography.html', 'Typography')}
+        ${navLink('pages/colors.html', 'Colors')}
+        ${navLink('pages/product-colours.html', 'Product Colours', 'padding-left:28px;font-size:13px;')}
+        ${navLink('pages/spacing.html', 'Spacing &amp; Grid')}
+        ${navLink('pages/tokens.html', 'Design Tokens')}
+        ${navLink('pages/icons.html', 'Icons')}
+        ${navLink('pages/flavour-icons.html', 'Flavour Icons', 'padding-left:28px;font-size:13px;')}
+        ${navLink('pages/usp-icons.html', 'USP Icons', 'padding-left:28px;font-size:13px;')}
+        ${navLink('pages/breakpoints.html', 'Breakpoints')}
       </div>
 
       <!-- <div class="nav-group">
@@ -47,13 +61,6 @@
   `;
 
   document.body.insertAdjacentHTML('afterbegin', html);
-
-  // Highlight active link
-  const currentPath = location.pathname === '/' ? '/' : location.pathname.replace(/\/$/, '');
-  document.querySelectorAll('.nav-link').forEach(link => {
-    const linkPath = new URL(link.href).pathname === '/' ? '/' : new URL(link.href).pathname.replace(/\/$/, '');
-    if (linkPath === currentPath) link.classList.add('active');
-  });
 
   // Toggle
   const sidebar  = document.getElementById('sidebar');
