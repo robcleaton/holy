@@ -12,18 +12,18 @@
   // ── Favicons ────────────────────────────────────────────────
   const favIco = document.createElement('link');
   favIco.rel = 'icon';
-  favIco.href = base + 'favicon.ico';
+  favIco.href = base + 'assets/favicon.ico';
   favIco.setAttribute('sizes', '32x32');
   document.head.appendChild(favIco);
 
   const favSvg = document.createElement('link');
   favSvg.rel = 'icon';
-  favSvg.href = base + 'favicon.svg';
+  favSvg.href = base + 'assets/favicon.svg';
   favSvg.type = 'image/svg+xml';
   document.head.appendChild(favSvg);
 
   const apple = document.createElement('link');
   apple.rel = 'apple-touch-icon';
-  apple.href = base + 'apple-touch-icon.png';
+  apple.href = base + 'assets/apple-touch-icon.png';
   document.head.appendChild(apple);
 })();

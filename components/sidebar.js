@@ -10,7 +10,7 @@
     <div class="sidebar-overlay" id="sidebar-overlay"></div>
     <nav class="sidebar" id="sidebar">
       <div class="sidebar-logo">
-        <a href="${base}"><img src="${base}holy-logo.svg" alt="Holy" class="sidebar-logo-mark"></a>
+        <a href="${base}"><img src="${base}assets/holy-logo.svg" alt="Holy" class="sidebar-logo-mark"></a>
         <span class="sidebar-logo-sub">Design System</span>
       </div>
 
