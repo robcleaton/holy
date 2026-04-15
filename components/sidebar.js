@@ -18,9 +18,20 @@
   }
 
   const html = `
-    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="mobile-header">
+      <a href="${base}" class="mobile-header-brand">
+        <img src="${base}assets/holy-logo.svg" alt="Holy" class="mobile-header-logo">
+        <span class="mobile-header-sub">Design System</span>
+      </a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+        <svg class="icon-bars" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+        <svg class="icon-x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
     <div class="sidebar-overlay" id="sidebar-overlay"></div>
     <nav class="sidebar" id="sidebar">
       <div class="sidebar-logo">
