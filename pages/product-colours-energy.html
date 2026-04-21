@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Holy DS — Product Colours / Energy</title>
+  <script src="../components/head.js"></script>
+  <style>
+    .convention-box {
+      background: rgba(0,0,0,0.04);
+      border: 1px solid var(--color-border);
+      border-radius: 4px;
+      padding: 16px 20px;
+      font-family: 'Instrument Sans', sans-serif;
+      font-size: 13px;
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 48px;
+    }
+
+    .convention-box code {
+      background: rgba(0,0,0,0.07);
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 12px;
+      color: #333;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .product-card {
+      border: 1px solid var(--color-border);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .product-card-name {
+      font-family: 'Instrument Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 10px 12px 8px;
+      background: #fff;
+      border-bottom: 1px solid var(--color-border);
+      letter-spacing: 0.01em;
+      color: #222;
+    }
+
+    .product-card-var {
+      font-family: 'Instrument Sans', sans-serif;
+      font-size: 10px;
+      color: var(--color-muted);
+      margin-top: 2px;
+      font-weight: 400;
+    }
+
+    .product-swatches {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .swatch {
+      height: 64px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-end;
+      padding: 8px 10px;
+    }
+
+    .swatch-label {
+      font-family: 'Instrument Sans', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      opacity: 0.6;
+      line-height: 1;
+      margin-bottom: 3px;
+    }
+
+    .swatch-hex {
+      font-family: 'Instrument Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      line-height: 1;
+    }
+  </style>
+</head>
+<body>
+
+<main class="main">
+<div class="page-body">
+
+  <div class="page-header">
+    <div class="page-header-eyebrow">Product Colours</div>
+    <h1>Energy</h1>
+    <p>Colour variables for all HOLY Energy products. Each product has two values — <strong>/1</strong> (light) and <strong>/2</strong> (dark/saturated) — defined in the <code style="font-size:13px; background:rgba(0,0,0,0.06); padding:2px 6px; border-radius:3px;">Products</code> Figma variable collection.</p>
+  </div>
+
+  <div class="convention-box">
+    <strong>Variable convention:</strong> <code>--energy/{ProductName}/1</code> and <code>--energy/{ProductName}/2</code><br>
+    e.g. <code>--energy/AcaiAnaconda/1</code> → <span style="display:inline-block;width:10px;height:10px;background:#CF7CC5;border-radius:2px;vertical-align:middle;margin:0 3px;"></span> <code>#CF7CC5</code>
+  </div>
+
+  <div class="section">
+    <div class="product-grid">
+
+      <div class="product-card">
+        <div class="product-card-name">Acai Anaconda<div class="product-card-var">--energy/AcaiAnaconda/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#CF7CC5;color:#fff;"><span class="swatch-label">/1</span><span class="swatch-hex">#CF7CC5</span></div>
+          <div class="swatch" style="background:#E6B7DE;color:#333;"><span class="swatch-label">/2</span><span class="swatch-hex">#E6B7DE</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Apple Alligator<div class="product-card-var">--energy/AppleAlligator/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#DCE168;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#DCE168</span></div>
+          <div class="swatch" style="background:#D3D940;color:#333;"><span class="swatch-label">/2</span><span class="swatch-hex">#D3D940</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Blood Orange Bat<div class="product-card-var">--energy/BloodOrangeBat/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#C7B0D5;color:#fff;"><span class="swatch-label">/1</span><span class="swatch-hex">#C7B0D5</span></div>
+          <div class="swatch" style="background:#AF8EC3;color:#fff;"><span class="swatch-label">/2</span><span class="swatch-hex">#AF8EC3</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Blue Raspberry<div class="product-card-var">--energy/BlueRaspberry/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#92D4F3;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#92D4F3</span></div>
+          <div class="swatch" style="background:#63C1EE;color:#333;"><span class="swatch-label">/2</span><span class="swatch-hex">#63C1EE</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Blueberry Bear<div class="product-card-var">--energy/BlueberryBear/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#F2948D;color:#fff;"><span class="swatch-label">/1</span><span class="swatch-hex">#F2948D</span></div>
+          <div class="swatch" style="background:#ED695F;color:#fff;"><span class="swatch-label">/2</span><span class="swatch-hex">#ED695F</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Bubblegum Butterfly<div class="product-card-var">--energy/BubblegumButterfly/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#F8ED69;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#F8ED69</span></div>
+          <div class="swatch" style="background:#F6E737;color:#333;"><span class="swatch-label">/2</span><span class="swatch-hex">#F6E737</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">BURRsday Bunny<div class="product-card-var">--energy/BURRsdayBunny/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#FAD6E0;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#FAD6E0</span></div>
+          <div class="swatch" style="background:#F4A9BE;color:#333;"><span class="swatch-label">/2</span><span class="swatch-hex">#F4A9BE</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Cactus Camel<div class="product-card-var">--energy/CactusCamel/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#96CEBA;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#96CEBA</span></div>
+          <div class="swatch" style="background:#74BEA4;color:#333;"><span class="swatch-label">/2</span><span class="swatch-hex">#74BEA4</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Caipirinha Crab<div class="product-card-var">--energy/CaipirinhaCrab/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#E8E45A;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#E8E45A</span></div>
+          <div class="swatch" style="background:#E2DD2D;color:#333;"><span class="swatch-label">/2</span><span class="swatch-hex">#E2DD2D</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Capybara Colada<div class="product-card-var">--energy/CapybaraColada/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#FFE8A2;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#FFE8A2</span></div>
+          <div class="swatch" style="background:#FFDC70;color:#333;"><span class="swatch-label">/2</span><span class="swatch-hex">#FFDC70</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Cherry Cheetah<div class="product-card-var">--energy/CherryCheetah/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#F6B0A5;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#F6B0A5</span></div>
+          <div class="swatch" style="background:#F28979;color:#fff;"><span class="swatch-label">/2</span><span class="swatch-hex">#F28979</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Citrus Cobra<div class="product-card-var">--energy/CitrusCobra/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#F9EC23;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#F9EC23</span></div>
+          <div class="swatch" style="background:#E4D706;color:#333;"><span class="swatch-label">/2</span><span class="swatch-hex">#E4D706</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Cola<div class="product-card-var">--energy/Cola/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#F1BF93;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#F1BF93</span></div>
+          <div class="swatch" style="background:#EBA465;color:#333;"><span class="swatch-label">/2</span><span class="swatch-hex">#EBA465</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Cotton Candy Caterpillar<div class="product-card-var">--energy/CottonCandyCaterpillar/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#CBEEFF;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#CBEEFF</span></div>
+          <div class="swatch" style="background:#EEF9FF;color:#333;"><span class="swatch-label">/2</span><span class="swatch-hex">#EEF9FF</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Daiquiri Dolphin<div class="product-card-var">--energy/DaiquiriDolphin/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#F4A7AF;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#F4A7AF</span></div>
+          <div class="swatch" style="background:#EF7C87;color:#fff;"><span class="swatch-label">/2</span><span class="swatch-hex">#EF7C87</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Dragonfruit Dragon<div class="product-card-var">--energy/DragonfruitDragon/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#F5E3AB;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#F5E3AB</span></div>
+          <div class="swatch" style="background:#F2DB92;color:#333;"><span class="swatch-label">/2</span><span class="swatch-hex">#F2DB92</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Energy Eel<div class="product-card-var">--energy/EnergyEel/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#BBE3FA;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#BBE3FA</span></div>
+          <div class="swatch" style="background:#8DD0F7;color:#333;"><span class="swatch-label">/2</span><span class="swatch-hex">#8DD0F7</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Frosty Fox<div class="product-card-var">--energy/FrostyFox/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#E0F2FD;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#E0F2FD</span></div>
+          <div class="swatch" style="background:#B2DFFA;color:#333;"><span class="swatch-label">/2</span><span class="swatch-hex">#B2DFFA</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Fruity Frog<div class="product-card-var">--energy/FruityFrog/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#F9C0A4;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#F9C0A4</span></div>
+          <div class="swatch" style="background:#F69F74;color:#fff;"><span class="swatch-label">/2</span><span class="swatch-hex">#F69F74</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Gorillas Grape<div class="product-card-var">--energy/GorillasGrape/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#C4D983;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#C4D983</span></div>
+          <div class="swatch" style="background:#B1CD5B;color:#333;"><span class="swatch-label">/2</span><span class="swatch-hex">#B1CD5B</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Grapefruit Giraffe<div class="product-card-var">--energy/GrapefruitGiraffe/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#F7EF82;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#F7EF82</span></div>
+          <div class="swatch" style="background:#F4E952;color:#333;"><span class="swatch-label">/2</span><span class="swatch-hex">#F4E952</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">HOLY XMAS<div class="product-card-var">--energy/HOLYXMAS/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#E8D2E7;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#E8D2E7</span></div>
+          <div class="swatch" style="background:#D7B1D6;color:#333;"><span class="swatch-label">/2</span><span class="swatch-hex">#D7B1D6</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Kiwi Komodo<div class="product-card-var">--energy/KiwiKomodo/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#A3D7DE;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#A3D7DE</span></div>
+          <div class="swatch" style="background:#7CC6D0;color:#333;"><span class="swatch-label">/2</span><span class="swatch-hex">#7CC6D0</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Lemon Lizard<div class="product-card-var">--energy/LemonLizard/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#D8E8C4;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#D8E8C4</span></div>
+          <div class="swatch" style="background:#C0DAA0;color:#333;"><span class="swatch-label">/2</span><span class="swatch-hex">#C0DAA0</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Lions Lemonade<div class="product-card-var">--energy/LionsLemonade/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#F0E859;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#F0E859</span></div>
+          <div class="swatch" style="background:#ECE22D;color:#333;"><span class="swatch-label">/2</span><span class="swatch-hex">#ECE22D</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Lollipop Lovebird<div class="product-card-var">--energy/LollipopLovebird/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#FF98A8;color:#fff;"><span class="swatch-label">/1</span><span class="swatch-hex">#FF98A8</span></div>
+          <div class="swatch" style="background:#FFCCD4;color:#333;"><span class="swatch-label">/2</span><span class="swatch-hex">#FFCCD4</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Mojito Macaw<div class="product-card-var">--energy/MojitoMacaw/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#FECC00;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#FECC00</span></div>
+          <div class="swatch" style="background:#CCA400;color:#333;"><span class="swatch-label">/2</span><span class="swatch-hex">#CCA400</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Orange Krakenarm<div class="product-card-var">--energy/OrangeKrakenarme/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#F5EBAF;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#F5EBAF</span></div>
+          <div class="swatch" style="background:#EFDF80;color:#333;"><span class="swatch-label">/2</span><span class="swatch-hex">#EFDF80</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Peach Panther<div class="product-card-var">--energy/PeachPanther/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#FBC171;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#FBC171</span></div>
+          <div class="swatch" style="background:#FAAB3E;color:#333;"><span class="swatch-label">/2</span><span class="swatch-hex">#FAAB3E</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Peacocks Punch<div class="product-card-var">--energy/PeacocksPunch/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#B0DDE9;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#B0DDE9</span></div>
+          <div class="swatch" style="background:#87CBDE;color:#333;"><span class="swatch-label">/2</span><span class="swatch-hex">#87CBDE</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Pomegranate Piranha<div class="product-card-var">--energy/PomegranatePiranha/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#F7BDC7;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#F7BDC7</span></div>
+          <div class="swatch" style="background:#F18D9F;color:#fff;"><span class="swatch-label">/2</span><span class="swatch-hex">#F18D9F</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Raspberry Raptor<div class="product-card-var">--energy/RaspberryRaptor/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#F08EB8;color:#fff;"><span class="swatch-label">/1</span><span class="swatch-hex">#F08EB8</span></div>
+          <div class="swatch" style="background:#EA619C;color:#fff;"><span class="swatch-label">/2</span><span class="swatch-hex">#EA619C</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Strawberry Shark<div class="product-card-var">--energy/StrawberryShark/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#F29DB1;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#F29DB1</span></div>
+          <div class="swatch" style="background:#EC6F8C;color:#fff;"><span class="swatch-label">/2</span><span class="swatch-hex">#EC6F8C</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Tangerine Tarantula<div class="product-card-var">--energy/TangerineTarantula/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#F5A488;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#F5A488</span></div>
+          <div class="swatch" style="background:#F1815A;color:#fff;"><span class="swatch-label">/2</span><span class="swatch-hex">#F1815A</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Thai Lime Toucan<div class="product-card-var">--energy/ThaiLimeToucan/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#D6EAD8;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#D6EAD8</span></div>
+          <div class="swatch" style="background:#B5D9B8;color:#333;"><span class="swatch-label">/2</span><span class="swatch-hex">#B5D9B8</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Tropical Tiger<div class="product-card-var">--energy/TropicalTiger/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#FBBC43;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#FBBC43</span></div>
+          <div class="swatch" style="background:#FAAA0F;color:#333;"><span class="swatch-label">/2</span><span class="swatch-hex">#FAAA0F</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Watermelon Whale<div class="product-card-var">--energy/WatermelonWhale/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#73C3EE;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#73C3EE</span></div>
+          <div class="swatch" style="background:#45AFE8;color:#fff;"><span class="swatch-label">/2</span><span class="swatch-hex">#45AFE8</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Wildberry Wolf<div class="product-card-var">--energy/WildberryWolf/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#CF96C3;color:#fff;"><span class="swatch-label">/1</span><span class="swatch-hex">#CF96C3</span></div>
+          <div class="swatch" style="background:#BF73AF;color:#fff;"><span class="swatch-label">/2</span><span class="swatch-hex">#BF73AF</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Woodruff Wolf<div class="product-card-var">--energy/WoodruffWolf/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#90C78F;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#90C78F</span></div>
+          <div class="swatch" style="background:#6EB66D;color:#fff;"><span class="swatch-label">/2</span><span class="swatch-hex">#6EB66D</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">XMAS Baked Apple<div class="product-card-var">--energy/XMASBakedApple/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#92CCC9;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#92CCC9</span></div>
+          <div class="swatch" style="background:#C0E6E4;color:#333;"><span class="swatch-label">/2</span><span class="swatch-hex">#C0E6E4</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+</main>
+
+<script src="../components/sidebar.js"></script>
+</body>
+</html>

@@ -44,6 +44,11 @@
         ${navLink('pages/typography.html', 'Typography')}
         ${navLink('pages/colors.html', 'Colors')}
         ${navLink('pages/product-colours.html', 'Product Colours', 'padding-left:28px;font-size:13px;')}
+        ${navLink('pages/product-colours-energy.html', 'Energy', 'padding-left:44px;font-size:12px;')}
+        ${navLink('pages/product-colours-milkshake.html', 'Milkshake', 'padding-left:44px;font-size:12px;')}
+        ${navLink('pages/product-colours-hydration.html', 'Hydration', 'padding-left:44px;font-size:12px;')}
+        ${navLink('pages/product-colours-iced-tea.html', 'Iced Tea', 'padding-left:44px;font-size:12px;')}
+        ${navLink('pages/product-colours-syrup.html', 'Syrup', 'padding-left:44px;font-size:12px;')}
         ${navLink('pages/spacing.html', 'Spacing &amp; Grid')}
         ${navLink('pages/tokens.html', 'Design Tokens')}
         ${navLink('pages/icons.html', 'Icons')}

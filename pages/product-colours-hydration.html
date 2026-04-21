@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Holy DS — Product Colours / Hydration</title>
+  <script src="../components/head.js"></script>
+  <style>
+    .convention-box {
+      background: rgba(0,0,0,0.04);
+      border: 1px solid var(--color-border);
+      border-radius: 4px;
+      padding: 16px 20px;
+      font-family: 'Instrument Sans', sans-serif;
+      font-size: 13px;
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 48px;
+    }
+
+    .convention-box code {
+      background: rgba(0,0,0,0.07);
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 12px;
+      color: #333;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .product-card {
+      border: 1px solid var(--color-border);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .product-card-name {
+      font-family: 'Instrument Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 10px 12px 8px;
+      background: #fff;
+      border-bottom: 1px solid var(--color-border);
+      letter-spacing: 0.01em;
+      color: #222;
+    }
+
+    .product-card-var {
+      font-family: 'Instrument Sans', sans-serif;
+      font-size: 10px;
+      color: var(--color-muted);
+      margin-top: 2px;
+      font-weight: 400;
+    }
+
+    .product-swatches {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .swatch {
+      height: 64px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-end;
+      padding: 8px 10px;
+    }
+
+    .swatch-label {
+      font-family: 'Instrument Sans', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      opacity: 0.6;
+      line-height: 1;
+      margin-bottom: 3px;
+    }
+
+    .swatch-hex {
+      font-family: 'Instrument Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      line-height: 1;
+    }
+  </style>
+</head>
+<body>
+
+<main class="main">
+<div class="page-body">
+
+  <div class="page-header">
+    <div class="page-header-eyebrow">Product Colours</div>
+    <h1>Hydration</h1>
+    <p>Colour variables for all HOLY Hydration products. Each product has two values — <strong>/1</strong> (light) and <strong>/2</strong> (dark/saturated) — defined in the <code style="font-size:13px; background:rgba(0,0,0,0.06); padding:2px 6px; border-radius:3px;">Products</code> Figma variable collection.</p>
+  </div>
+
+  <div class="convention-box">
+    <strong>Variable convention:</strong> <code>--hydration/{ProductName}/1</code> and <code>--hydration/{ProductName}/2</code><br>
+    e.g. <code>--hydration/Watermelon/1</code> → <span style="display:inline-block;width:10px;height:10px;background:#F8C9DF;border-radius:2px;vertical-align:middle;margin:0 3px;"></span> <code>#F8C9DF</code>
+  </div>
+
+  <div class="section">
+    <div class="product-grid">
+
+      <div class="product-card">
+        <div class="product-card-name">Coconut<div class="product-card-var">--hydration/Coconut/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#9FC96D;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#9FC96D</span></div>
+          <div class="swatch" style="background:#87BC49;color:#333;"><span class="swatch-label">/2</span><span class="swatch-hex">#87BC49</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Cranberry<div class="product-card-var">--hydration/Cranberry/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#F29DB1;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#F29DB1</span></div>
+          <div class="swatch" style="background:#EC6F8C;color:#fff;"><span class="swatch-label">/2</span><span class="swatch-hex">#EC6F8C</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Dragonfruit<div class="product-card-var">--hydration/Dragonfruit/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#FCE5E8;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#FCE5E8</span></div>
+          <div class="swatch" style="background:#F7B6BE;color:#333;"><span class="swatch-label">/2</span><span class="swatch-hex">#F7B6BE</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Grapefruit<div class="product-card-var">--hydration/Grapefruit/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#FADCEB;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#FADCEB</span></div>
+          <div class="swatch" style="background:#F4AFD1;color:#333;"><span class="swatch-label">/2</span><span class="swatch-hex">#F4AFD1</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Guava<div class="product-card-var">--hydration/Guava/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#F6B1AD;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#F6B1AD</span></div>
+          <div class="swatch" style="background:#F1857E;color:#fff;"><span class="swatch-label">/2</span><span class="swatch-hex">#F1857E</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Lemon<div class="product-card-var">--hydration/Lemon/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#F7EF82;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#F7EF82</span></div>
+          <div class="swatch" style="background:#F4E952;color:#333;"><span class="swatch-label">/2</span><span class="swatch-hex">#F4E952</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Orange<div class="product-card-var">--hydration/Orange/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#FDD27A;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#FDD27A</span></div>
+          <div class="swatch" style="background:#FCC24A;color:#333;"><span class="swatch-label">/2</span><span class="swatch-hex">#FCC24A</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Passionfruit<div class="product-card-var">--hydration/Passionfruit/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#E2A4CA;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#E2A4CA</span></div>
+          <div class="swatch" style="background:#D57CB2;color:#fff;"><span class="swatch-label">/2</span><span class="swatch-hex">#D57CB2</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Pear<div class="product-card-var">--hydration/Pear/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#F5E4B8;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#F5E4B8</span></div>
+          <div class="swatch" style="background:#EFD38B;color:#333;"><span class="swatch-label">/2</span><span class="swatch-hex">#EFD38B</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Pineapple<div class="product-card-var">--hydration/Pineapple/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#FFEA72;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#FFEA72</span></div>
+          <div class="swatch" style="background:#FFE23D;color:#333;"><span class="swatch-label">/2</span><span class="swatch-hex">#FFE23D</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Sour Cherry<div class="product-card-var">--hydration/SourCherry/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#D2DDA1;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#D2DDA1</span></div>
+          <div class="swatch" style="background:#C0D07C;color:#333;"><span class="swatch-label">/2</span><span class="swatch-hex">#C0D07C</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Strawberry Kiwi<div class="product-card-var">--hydration/StrawberryKiwi/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#E4EAA6;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#E4EAA6</span></div>
+          <div class="swatch" style="background:#D7E07B;color:#333;"><span class="swatch-label">/2</span><span class="swatch-hex">#D7E07B</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Watermelon<div class="product-card-var">--hydration/Watermelon/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#F8C9DF;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#F8C9DF</span></div>
+          <div class="swatch" style="background:#F29CC4;color:#fff;"><span class="swatch-label">/2</span><span class="swatch-hex">#F29CC4</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">White Peach<div class="product-card-var">--hydration/WhitePeach/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#FBD6CC;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#FBD6CC</span></div>
+          <div class="swatch" style="background:#F7AF9C;color:#333;"><span class="swatch-label">/2</span><span class="swatch-hex">#F7AF9C</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+</main>
+
+<script src="../components/sidebar.js"></script>
+</body>
+</html>

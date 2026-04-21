@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Holy DS — Product Colours / Iced Tea</title>
+  <script src="../components/head.js"></script>
+  <style>
+    .convention-box {
+      background: rgba(0,0,0,0.04);
+      border: 1px solid var(--color-border);
+      border-radius: 4px;
+      padding: 16px 20px;
+      font-family: 'Instrument Sans', sans-serif;
+      font-size: 13px;
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 48px;
+    }
+
+    .convention-box code {
+      background: rgba(0,0,0,0.07);
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 12px;
+      color: #333;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .product-card {
+      border: 1px solid var(--color-border);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .product-card-name {
+      font-family: 'Instrument Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 10px 12px 8px;
+      background: #fff;
+      border-bottom: 1px solid var(--color-border);
+      letter-spacing: 0.01em;
+      color: #222;
+    }
+
+    .product-card-var {
+      font-family: 'Instrument Sans', sans-serif;
+      font-size: 10px;
+      color: var(--color-muted);
+      margin-top: 2px;
+      font-weight: 400;
+    }
+
+    .product-swatches {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .swatch {
+      height: 64px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-end;
+      padding: 8px 10px;
+    }
+
+    .swatch-label {
+      font-family: 'Instrument Sans', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      opacity: 0.6;
+      line-height: 1;
+      margin-bottom: 3px;
+    }
+
+    .swatch-hex {
+      font-family: 'Instrument Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      line-height: 1;
+    }
+  </style>
+</head>
+<body>
+
+<main class="main">
+<div class="page-body">
+
+  <div class="page-header">
+    <div class="page-header-eyebrow">Product Colours</div>
+    <h1>Iced Tea</h1>
+    <p>Colour variables for all HOLY Iced Tea products. Each product has two values — <strong>/1</strong> (light) and <strong>/2</strong> (dark/saturated) — defined in the <code style="font-size:13px; background:rgba(0,0,0,0.06); padding:2px 6px; border-radius:3px;">Products</code> Figma variable collection.</p>
+  </div>
+
+  <div class="convention-box">
+    <strong>Variable convention:</strong> <code>--iced-tea/{ProductName}/1</code> and <code>--iced-tea/{ProductName}/2</code><br>
+    e.g. <code>--iced-tea/Peach/1</code> → <span style="display:inline-block;width:10px;height:10px;background:#F5A488;border-radius:2px;vertical-align:middle;margin:0 3px;"></span> <code>#F5A488</code>
+  </div>
+
+  <div class="section">
+    <div class="product-grid">
+
+      <div class="product-card">
+        <div class="product-card-name">Acai<div class="product-card-var">--iced-tea/Acai/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#CF96C3;color:#fff;"><span class="swatch-label">/1</span><span class="swatch-hex">#CF96C3</span></div>
+          <div class="swatch" style="background:#BF73AF;color:#fff;"><span class="swatch-label">/2</span><span class="swatch-hex">#BF73AF</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Apple<div class="product-card-var">--iced-tea/Apple/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#DAE49B;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#DAE49B</span></div>
+          <div class="swatch" style="background:#CBD972;color:#333;"><span class="swatch-label">/2</span><span class="swatch-hex">#CBD972</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Blackberry<div class="product-card-var">--iced-tea/Blackberry/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#BEABD3;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#BEABD3</span></div>
+          <div class="swatch" style="background:#A48AC2;color:#fff;"><span class="swatch-label">/2</span><span class="swatch-hex">#A48AC2</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Classic Black<div class="product-card-var">--iced-tea/ClassicBlack/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#C0E0FF;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#C0E0FF</span></div>
+          <div class="swatch" style="background:#E6F2FF;color:#333;"><span class="swatch-label">/2</span><span class="swatch-hex">#E6F2FF</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Classic Green<div class="product-card-var">--iced-tea/ClassicGreen/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#B9E8B4;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#B9E8B4</span></div>
+          <div class="swatch" style="background:#E2F7E0;color:#333;"><span class="swatch-label">/2</span><span class="swatch-hex">#E2F7E0</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Classic Hibiscus<div class="product-card-var">--iced-tea/ClassicHibiscus/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#FFDCF6;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#FFDCF6</span></div>
+          <div class="swatch" style="background:#FFF0FB;color:#333;"><span class="swatch-label">/2</span><span class="swatch-hex">#FFF0FB</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Darjeeling Honey<div class="product-card-var">--iced-tea/DarjeelingHoney/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#FFD854;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#FFD854</span></div>
+          <div class="swatch" style="background:#FFCC1F;color:#333;"><span class="swatch-label">/2</span><span class="swatch-hex">#FFCC1F</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Honey Melon<div class="product-card-var">--iced-tea/HoneyMelon/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#F2EFA2;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#F2EFA2</span></div>
+          <div class="swatch" style="background:#ECE774;color:#333;"><span class="swatch-label">/2</span><span class="swatch-hex">#ECE774</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Lemon Honey<div class="product-card-var">--iced-tea/LemonHoney/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#FFF264;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#FFF264</span></div>
+          <div class="swatch" style="background:#FFEE33;color:#333;"><span class="swatch-label">/2</span><span class="swatch-hex">#FFEE33</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Lime Mint Matcha<div class="product-card-var">--iced-tea/LimeMintMatcha/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#D3CDE7;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#D3CDE7</span></div>
+          <div class="swatch" style="background:#B3A9D6;color:#333;"><span class="swatch-label">/2</span><span class="swatch-hex">#B3A9D6</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Mango Passionfruit<div class="product-card-var">--iced-tea/MangoPassionfruit/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#FCC049;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#FCC049</span></div>
+          <div class="swatch" style="background:#FBAF18;color:#333;"><span class="swatch-label">/2</span><span class="swatch-hex">#FBAF18</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Peach<div class="product-card-var">--iced-tea/Peach/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#F5A488;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#F5A488</span></div>
+          <div class="swatch" style="background:#F1815A;color:#fff;"><span class="swatch-label">/2</span><span class="swatch-hex">#F1815A</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Pineapple<div class="product-card-var">--iced-tea/Pineapple/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#F7AB64;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#F7AB64</span></div>
+          <div class="swatch" style="background:#F49133;color:#fff;"><span class="swatch-label">/2</span><span class="swatch-hex">#F49133</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Raspberry Vanilla<div class="product-card-var">--iced-tea/RaspberryVanilla/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#F7C4DC;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#F7C4DC</span></div>
+          <div class="swatch" style="background:#F198C2;color:#fff;"><span class="swatch-label">/2</span><span class="swatch-hex">#F198C2</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Red Grapes<div class="product-card-var">--iced-tea/RedGrapes/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#F39C9A;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#F39C9A</span></div>
+          <div class="swatch" style="background:#EE706D;color:#fff;"><span class="swatch-label">/2</span><span class="swatch-hex">#EE706D</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Strawberry Hibiscus<div class="product-card-var">--iced-tea/StrawberryHibiscus/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#FF6878;color:#fff;"><span class="swatch-label">/1</span><span class="swatch-hex">#FF6878</span></div>
+          <div class="swatch" style="background:#FFAFB7;color:#333;"><span class="swatch-label">/2</span><span class="swatch-hex">#FFAFB7</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Watermelon<div class="product-card-var">--iced-tea/Watermelon/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#F7BDC3;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#F7BDC3</span></div>
+          <div class="swatch" style="background:#F29CC4;color:#fff;"><span class="swatch-label">/2</span><span class="swatch-hex">#F29CC4</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-name">Winter Punch<div class="product-card-var">--iced-tea/WinterPunch/1 &amp; /2</div></div>
+        <div class="product-swatches">
+          <div class="swatch" style="background:#C8E2C6;color:#333;"><span class="swatch-label">/1</span><span class="swatch-hex">#C8E2C6</span></div>
+          <div class="swatch" style="background:#E2F7E0;color:#333;"><span class="swatch-label">/2</span><span class="swatch-hex">#E2F7E0</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+</main>
+
+<script src="../components/sidebar.js"></script>
+</body>
+</html>
