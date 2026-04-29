@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Holy — Raspberry Rapture PDP</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @font-face {
+      font-family: 'PP Agrandir';
+      font-weight: 400;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/PPAgrandir-Regular.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'PP Agrandir';
+      font-weight: 600;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/PPAgrandir-Medium.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'PP Agrandir';
+      font-weight: 700;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/PPAgrandir-Bold.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'ObviouslyNarrow';
+      font-weight: 900;
+      font-style: normal;
+      src: url('https://kcy8z2wyeei7zjjs-47328854173.shopifypreview.com/cdn/shop/t/2153/assets/ObviouslyNarrow-Black.woff2') format('woff2');
+    }
+
+    *, *::before, *::after {
+      font-family: 'PP Agrandir', sans-serif;
+      box-sizing: border-box;
+    }
+
+    .font-display {
+      font-family: 'ObviouslyNarrow', sans-serif;
+      font-weight: 900;
+    }
+
+    .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+    .scrollbar-hide::-webkit-scrollbar { display: none; }
+
+    /* Carousel */
+    #carousel-track {
+      transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      will-change: transform;
+    }
+
+    /* Active dot pill */
+    [data-dot].active {
+      width: 20px;
+      background: white;
+    }
+    [data-dot] {
+      width: 8px;
+      background: rgba(255,255,255,0.4);
+      transition: width 0.2s, background 0.2s;
+    }
+
+    .tab-btn {
+      transition: color 0.15s, border-color 0.15s;
+    }
+
+    .size-option {
+      transition: border-color 0.1s, border-width 0.1s;
+    }
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            raspberry:       '#ea619c',
+            'raspberry-light': '#ffb0db',
+            'holy-yellow':     '#ffd007',
+            trustgreen:      '#00b67a',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-raspberry min-h-screen">
+
+  <!-- ══ HEADER ══════════════════════════════════════════════════ -->
+  <header class="sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 lg:h-[72px] flex items-center justify-between">
+      <button class="w-10 h-10 flex items-center justify-center flex-shrink-0" aria-label="Menu">
+        <svg width="20" height="14" viewBox="0 0 20 14" fill="none">
+          <line x1="0" y1="1"  x2="20" y2="1"  stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="0" y1="7"  x2="20" y2="7"  stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="0" y1="13" x2="20" y2="13" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <img src="https://www.figma.com/api/mcp/asset/7d31f344-a62b-4c62-935f-7087fbffadce" alt="HOLY" class="h-[27px] w-[99px] object-contain">
+      <div class="flex items-center gap-1">
+        <button class="w-10 h-10 flex items-center justify-center" aria-label="Search">
+          <svg width="17" height="18" viewBox="0 0 17 18" fill="none">
+            <circle cx="7.5" cy="7.5" r="6.5" stroke="black" stroke-width="1.5"/>
+            <path d="M12.5 12.5L16 16" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <button class="w-10 h-10 flex items-center justify-center" aria-label="Basket">
+          <svg width="16" height="17" viewBox="0 0 16 17" fill="none">
+            <path d="M2 5h12l-1.5 9H3.5L2 5z" stroke="black" stroke-width="1.5" stroke-linejoin="round"/>
+            <path d="M5.5 5V3.5a2.5 2.5 0 0 1 5 0V5" stroke="black" stroke-width="1.5"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ══ MAIN CONTENT ════════════════════════════════════════════ -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 lg:pt-10 pb-6">
+
+    <!-- Mobile-only title (above carousel) -->
+    <div class="lg:hidden pb-4">
+      <p class="text-[12px] font-bold uppercase text-black">Energy</p>
+      <h1 class="font-display text-[44px] leading-[44px] text-black mt-0.5">Raspberry<br>Rapture</h1>
+      <p class="text-[18px] text-black leading-[22px] mt-2">
+        An exotic flavour blend of raspberry &amp; yuzu — fruity, refreshing, and zero sugar.
+      </p>
+      <div class="flex items-center gap-1.5 mt-3">
+        <div class="flex gap-px">
+          <img src="https://www.figma.com/api/mcp/asset/d503c961-dba8-44cf-85ae-4f6c30c7a80f" alt="★" class="w-4 h-4">
+          <img src="https://www.figma.com/api/mcp/asset/d503c961-dba8-44cf-85ae-4f6c30c7a80f" alt="★" class="w-4 h-4">
+          <img src="https://www.figma.com/api/mcp/asset/d503c961-dba8-44cf-85ae-4f6c30c7a80f" alt="★" class="w-4 h-4">
+          <img src="https://www.figma.com/api/mcp/asset/d503c961-dba8-44cf-85ae-4f6c30c7a80f" alt="★" class="w-4 h-4">
+          <img src="https://www.figma.com/api/mcp/asset/91d09e9c-fbc6-4cd8-909c-372b61c21f11" alt="☆" class="w-4 h-4">
+        </div>
+        <span class="text-[14px] font-bold underline underline-offset-2">14 Reviews</span>
+      </div>
+    </div>
+
+    <!-- Product grid: 2 cols on desktop -->
+    <div class="lg:grid lg:grid-cols-[1fr_420px] lg:gap-10 lg:items-start">
+
+      <!-- ── LEFT: Carousel ─────────────────────────────────────── -->
+      <div class="-mx-4 sm:-mx-6 lg:mx-0">
+        <div class="relative overflow-hidden lg:rounded-2xl h-[390px] lg:h-[540px]" id="carousel-wrapper">
+
+          <!-- Track -->
+          <div id="carousel-track" class="flex h-full" style="transform:translateX(0)">
+
+            <!-- Slide 1 – product hero -->
+            <div class="flex-shrink-0 w-full h-full bg-raspberry-light relative overflow-hidden">
+              <img
+                src="https://www.figma.com/api/mcp/asset/29ddc2d4-3dda-4843-9fa8-a0cb447c8f3c"
+                alt="Raspberry Rapture can"
+                class="absolute left-[5%] top-0 w-[90%] h-[80%] object-contain"
+              >
+              <div class="absolute bottom-0 left-0 right-0 p-4">
+                <div class="flex gap-2 max-w-sm mx-auto lg:max-w-none">
+                  <div class="flex-1 bg-white/30 rounded-lg py-2 flex flex-col items-center gap-0.5">
+                    <img src="https://www.figma.com/api/mcp/asset/761b9be0-2037-4aea-b819-7bdd0611d874" alt="" class="w-11 h-11 object-contain">
+                    <p class="text-[9px] font-semibold tracking-[0.2px] text-black">Zero sugar</p>
+                  </div>
+                  <div class="flex-1 bg-white/30 rounded-lg py-2 flex flex-col items-center gap-0.5">
+                    <img src="https://www.figma.com/api/mcp/asset/bcfa7370-cfab-4837-8ab1-265e9b6285a4" alt="" class="w-11 h-11 object-contain">
+                    <p class="text-[9px] font-semibold tracking-[0.2px] text-black">7 Vitamins</p>
+                  </div>
+                  <div class="flex-1 bg-white/30 rounded-lg py-2 flex flex-col items-center gap-0.5">
+                    <img src="https://www.figma.com/api/mcp/asset/1f54cb86-21ff-439d-ae71-4443962bc45d" alt="" class="w-11 h-11 object-contain">
+                    <p class="text-[9px] font-semibold tracking-[0.2px] text-black">NewCaff</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="flex-shrink-0 w-full h-full bg-raspberry-light/80 flex items-center justify-center overflow-hidden">
+              <img src="https://www.figma.com/api/mcp/asset/271646a4-a959-461c-9800-b42734fe6639" alt="Product view 2" class="w-[85%] max-w-[400px] h-auto object-contain">
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="flex-shrink-0 w-full h-full bg-raspberry-light/80 flex items-center justify-center overflow-hidden">
+              <img src="https://www.figma.com/api/mcp/asset/6e2c7f50-a073-4c03-8a3e-207c6d6b7dd7" alt="Product view 3" class="w-[85%] max-w-[400px] h-auto object-contain">
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="flex-shrink-0 w-full h-full bg-[#73c3ee]/80 flex items-center justify-center overflow-hidden">
+              <img src="https://www.figma.com/api/mcp/asset/9fa4dc20-95de-4b51-a6b4-e96c915ccb61" alt="Product view 4" class="w-[85%] max-w-[400px] h-auto object-contain">
+            </div>
+
+          </div><!-- /track -->
+
+          <!-- Prev/Next arrows -->
+          <button onclick="prevSlide()" aria-label="Previous image"
+            class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 hover:bg-white rounded-full flex items-center justify-center z-10 transition-colors shadow-sm">
+            <svg width="8" height="13" viewBox="0 0 8 13" fill="none">
+              <path d="M7 1.5L1.5 6.5L7 11.5" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <button onclick="nextSlide()" aria-label="Next image"
+            class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 hover:bg-white rounded-full flex items-center justify-center z-10 transition-colors shadow-sm">
+            <svg width="8" height="13" viewBox="0 0 8 13" fill="none">
+              <path d="M1 1.5L6.5 6.5L1 11.5" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+
+          <!-- Dot indicators -->
+          <div class="absolute bottom-[80px] lg:bottom-4 left-0 right-0 flex justify-center gap-1.5 z-10">
+            <button data-dot="0" class="h-2 rounded-full active" onclick="goToSlide(0)" aria-label="Slide 1"></button>
+            <button data-dot="1" class="h-2 rounded-full"        onclick="goToSlide(1)" aria-label="Slide 2"></button>
+            <button data-dot="2" class="h-2 rounded-full"        onclick="goToSlide(2)" aria-label="Slide 3"></button>
+            <button data-dot="3" class="h-2 rounded-full"        onclick="goToSlide(3)" aria-label="Slide 4"></button>
+          </div>
+
+        </div><!-- /carousel-wrapper -->
+      </div><!-- /left -->
+
+      <!-- ── RIGHT: Product info + Purchase ─────────────────────── -->
+      <div class="mt-5 lg:mt-0 lg:sticky lg:top-[88px]">
+
+        <!-- Desktop-only title -->
+        <div class="hidden lg:block mb-5">
+          <p class="text-[12px] font-bold uppercase text-black">Energy</p>
+          <h1 class="font-display text-[52px] leading-[52px] text-black mt-0.5">Raspberry<br>Rapture</h1>
+          <p class="text-[18px] text-black leading-[24px] mt-2 max-w-sm">
+            An exotic flavour blend of raspberry &amp; yuzu — fruity, refreshing, and zero sugar.
+          </p>
+          <div class="flex items-center gap-1.5 mt-3">
+            <div class="flex gap-px">
+              <img src="https://www.figma.com/api/mcp/asset/d503c961-dba8-44cf-85ae-4f6c30c7a80f" alt="★" class="w-4 h-4">
+              <img src="https://www.figma.com/api/mcp/asset/d503c961-dba8-44cf-85ae-4f6c30c7a80f" alt="★" class="w-4 h-4">
+              <img src="https://www.figma.com/api/mcp/asset/d503c961-dba8-44cf-85ae-4f6c30c7a80f" alt="★" class="w-4 h-4">
+              <img src="https://www.figma.com/api/mcp/asset/d503c961-dba8-44cf-85ae-4f6c30c7a80f" alt="★" class="w-4 h-4">
+              <img src="https://www.figma.com/api/mcp/asset/91d09e9c-fbc6-4cd8-909c-372b61c21f11" alt="☆" class="w-4 h-4">
+            </div>
+            <span class="text-[14px] font-bold underline underline-offset-2">14 Reviews</span>
+          </div>
+        </div>
+
+        <!-- Flavour row -->
+        <div class="flex items-center justify-between px-1 py-2 mb-3">
+          <p class="text-[14px] font-bold uppercase text-black">31 Energy Flavours</p>
+          <button class="flex items-center gap-2">
+            <div class="flex -space-x-1">
+              <div class="w-6 h-6 rounded-full bg-raspberry-light border-2 border-white overflow-hidden">
+                <img src="https://www.figma.com/api/mcp/asset/553e13eb-d902-433a-bcd1-684709743417" class="w-full h-full object-cover" alt="">
+              </div>
+              <div class="w-6 h-6 rounded-full bg-[#f9c] border-2 border-white overflow-hidden">
+                <img src="https://www.figma.com/api/mcp/asset/9fa4dc20-95de-4b51-a6b4-e96c915ccb61" class="w-full h-full object-cover" alt="">
+              </div>
+              <div class="w-6 h-6 rounded-full bg-[#73c3ee] border-2 border-white"></div>
+            </div>
+            <svg width="8" height="13" viewBox="0 0 8 13" fill="none" class="rotate-90">
+              <path d="M1 1.5l5.5 5L1 11.5" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- ── Purchase panel ───────────────────────────────────── -->
+        <div class="bg-white rounded-2xl overflow-hidden">
+
+          <!-- Flavour details accordion -->
+          <button class="w-full px-5 py-3 flex items-center justify-between border-b border-black/10">
+            <span class="text-[14px] font-bold uppercase">Flavour details</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M6 9l6 6 6-6" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+
+          <!-- Size options -->
+          <div class="px-5 pt-4 pb-3">
+            <p class="text-[14px] font-bold uppercase mb-3">Choose your size</p>
+            <div class="flex flex-col gap-2" id="size-options">
+
+              <button class="size-option w-full border-2 border-black rounded-xl overflow-hidden flex items-stretch text-left" onclick="selectSize(this)">
+                <div class="w-[74px] flex-shrink-0 bg-raspberry-light relative">
+                  <img src="https://www.figma.com/api/mcp/asset/a36cc7ab-c699-48e6-8101-88a6c83f10cf" alt="" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+                <div class="flex flex-1 items-center px-3 py-3 gap-2 min-h-[74px]">
+                  <div class="flex-1">
+                    <p class="text-[14px] font-bold">Tub + Shaker</p>
+                    <p class="text-[12px] text-black/60">50 drinks</p>
+                  </div>
+                  <div class="text-right">
+                    <p class="text-[14px] font-bold">£39.99</p>
+                    <p class="text-[12px] text-[#737373]">Inc. VAT</p>
+                  </div>
+                </div>
+              </button>
+
+              <button class="size-option w-full border border-black/15 rounded-xl overflow-hidden flex items-stretch text-left" onclick="selectSize(this)">
+                <div class="w-[74px] flex-shrink-0 bg-raspberry-light relative">
+                  <img src="https://www.figma.com/api/mcp/asset/a34490f5-f8c2-4ac7-bbdd-70e2d2b3d53f" alt="" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+                <div class="flex flex-1 items-center px-3 py-3 gap-2 min-h-[74px]">
+                  <div class="flex-1">
+                    <p class="text-[14px] font-bold">Box</p>
+                    <p class="text-[12px] text-black/60">12 drinks</p>
+                  </div>
+                  <div class="text-right">
+                    <p class="text-[14px] font-bold">£12.49</p>
+                    <p class="text-[12px] text-[#737373]">Inc. VAT</p>
+                  </div>
+                </div>
+              </button>
+
+              <button class="size-option w-full border border-black/15 rounded-xl overflow-hidden flex items-stretch text-left" onclick="selectSize(this)">
+                <div class="w-[74px] flex-shrink-0 bg-raspberry-light relative">
+                  <img src="https://www.figma.com/api/mcp/asset/36084582-cbaf-45f5-8fdc-3103193299dd" alt="" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+                <div class="flex flex-1 items-center px-3 py-3 gap-2 min-h-[74px]">
+                  <div class="flex-1">
+                    <p class="text-[14px] font-bold">Sachet</p>
+                    <p class="text-[12px] text-black/60">1 drink</p>
+                  </div>
+                  <div class="text-right">
+                    <p class="text-[14px] font-bold">£1.50</p>
+                    <p class="text-[12px] text-[#737373]">Inc. VAT</p>
+                  </div>
+                </div>
+              </button>
+
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="px-5 pb-5 flex flex-col items-center gap-3">
+            <p class="text-[14px] font-bold uppercase text-[#737373] text-center">5 Litres of HOLY / ≈ £0.80 per drink</p>
+            <button class="w-full bg-holy-yellow rounded-full py-4 text-[14px] font-bold uppercase hover:brightness-95 active:scale-[0.98] transition-all">
+              Add to cart
+            </button>
+            <div class="flex items-center gap-2">
+              <button class="text-[14px] font-bold uppercase underline underline-offset-2">Mix &amp; Match</button>
+              <span class="text-[14px] uppercase">Save up to 20%</span>
+            </div>
+          </div>
+
+          <!-- Delivery info -->
+          <div class="bg-[#f3f3f3] px-6 py-6">
+            <p class="text-[14px] text-center leading-[22px] mb-4">
+              <span class="text-trustgreen font-semibold">Estimated 3-day delivery</span>
+              <span class="text-black"> on </span>
+              <span class="font-semibold text-black">Saturday, November 22nd</span>
+              <span class="text-black"> in </span>
+              <span class="underline underline-offset-2">10178 Germany</span>
+              <span class="text-black"> if ordered within the next 02:13:02</span>
+            </p>
+            <div class="flex items-center gap-2 justify-center mb-4">
+              <img src="https://www.figma.com/api/mcp/asset/aef51fa2-5102-457f-92b1-e81ad6d711eb" alt="" class="w-8 h-8 opacity-60 object-contain">
+              <p class="text-[14px] text-[#737373]">Free shipping from orders over £49</p>
+            </div>
+            <div class="flex justify-center gap-10">
+              <div class="flex flex-col items-center gap-1 max-w-[110px]">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" class="opacity-60">
+                  <rect x="4" y="8" width="24" height="18" rx="2" stroke="#737373" stroke-width="1.5"/>
+                  <path d="M4 13h24" stroke="#737373" stroke-width="1.5"/>
+                  <circle cx="10" cy="19" r="1.5" fill="#737373"/>
+                </svg>
+                <p class="text-[12px] text-[#737373] text-center leading-4">Pay after 30 days</p>
+              </div>
+              <div class="flex flex-col items-center gap-1 max-w-[110px]">
+                <img src="https://www.figma.com/api/mcp/asset/cbd4d9df-6af8-4d41-8f67-4c23ab688f19" alt="" class="w-8 h-8 opacity-60 object-contain">
+                <p class="text-[12px] text-[#737373] text-center leading-4">Risk-Free trial</p>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /purchase panel -->
+      </div><!-- /right -->
+
+    </div><!-- /product grid -->
+  </div><!-- /max-w wrapper -->
+
+  <!-- ══ NUTRITION SECTION ════════════════════════════════════════ -->
+  <div class="bg-raspberry-light mt-8 lg:mt-12">
+    <div class="max-w-7xl mx-auto">
+
+      <!-- Scrollable tab strip -->
+      <div class="overflow-x-auto scrollbar-hide border-b-2 border-black/10">
+        <div class="flex px-4 sm:px-6 lg:px-8 whitespace-nowrap min-w-max">
+
+          <button data-tab="overview"    class="tab-btn py-3 px-3 text-[14px] font-bold uppercase border-b-2 border-black    text-black    -mb-[2px]" onclick="switchTab('overview')"   >Raspberry Rapture</button>
+          <button data-tab="ingredients" class="tab-btn py-3 px-3 text-[14px] font-bold uppercase border-b-2 border-transparent text-[#737373] -mb-[2px]" onclick="switchTab('ingredients')">Ingredients</button>
+          <button data-tab="nutrition"   class="tab-btn py-3 px-3 text-[14px] font-bold uppercase border-b-2 border-transparent text-[#737373] -mb-[2px]" onclick="switchTab('nutrition')"  >Nutritional Facts</button>
+          <button data-tab="vitamins"    class="tab-btn py-3 px-3 text-[14px] font-bold uppercase border-b-2 border-transparent text-[#737373] -mb-[2px]" onclick="switchTab('vitamins')"   >Vitamins Complex</button>
+          <button data-tab="nootropics" class="tab-btn py-3 px-3 text-[14px] font-bold uppercase border-b-2 border-transparent text-[#737373] -mb-[2px]" onclick="switchTab('nootropics')">Nootropics Complex</button>
+          <button data-tab="storage"    class="tab-btn py-3 px-3 text-[14px] font-bold uppercase border-b-2 border-transparent text-[#737373] -mb-[2px]" onclick="switchTab('storage')"   >Storage</button>
+
+        </div>
+      </div>
+
+      <!-- ── Tab: Overview ────────────────────────────────────────── -->
+      <div id="tab-overview" class="tab-content px-4 sm:px-6 lg:px-8 pt-8 pb-10">
+
+        <div class="max-w-3xl mb-6">
+          <h2 class="text-[22px] lg:text-[26px] font-bold text-black leading-[30px] lg:leading-[34px] mb-2">Volle Fruchtpower: Gönn dir unseren leckeren Highflyer mit Himbeere &amp; Yuzu!</h2>
+          <p class="text-[16px] font-semibold text-black leading-[26px]">
+            Sweet raspberry meets exotic yuzu from Japan. Get amazing taste with a clear conscience — thanks to zero sugar, zero taurine or artificial flavors.
+          </p>
+        </div>
+
+        <!-- Feature list: 2-col on desktop -->
+        <div class="grid sm:grid-cols-2 gap-4 mb-8 max-w-3xl">
+          <div class="flex items-center gap-4">
+            <div class="w-[60px] h-[60px] flex-shrink-0"><img src="https://www.figma.com/api/mcp/asset/a248c409-a803-4146-8fc8-afd7a71cbb3d" alt="" class="w-full h-full object-contain"></div>
+            <div>
+              <p class="text-[16px] font-bold text-black">Amazing taste</p>
+              <p class="text-[14px] text-black">100% natural fruit flavors &amp; colors</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="w-[60px] h-[60px] flex-shrink-0"><img src="https://www.figma.com/api/mcp/asset/463edd87-7dee-4d31-ad59-e755f10a0fba" alt="" class="w-full h-full object-contain"></div>
+            <div>
+              <p class="text-[16px] font-bold text-black">A clear conscience</p>
+              <p class="text-[14px] text-black">Sugar-free, low in calories &amp; rich in vitamins</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="w-[60px] h-[60px] flex-shrink-0"><img src="https://www.figma.com/api/mcp/asset/6cba8b6e-391d-4ef0-8f08-9c945936715a" alt="" class="w-full h-full object-contain"></div>
+            <div>
+              <p class="text-[16px] font-bold text-black">No bullsh*t</p>
+              <p class="text-[14px] text-black">Without taurine or other questionable ingredients</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="w-[60px] h-[60px] flex-shrink-0"><img src="https://www.figma.com/api/mcp/asset/b9c00b15-b23b-40bd-b461-1b1be2e75e4c" alt="" class="w-full h-full object-contain"></div>
+            <div>
+              <p class="text-[16px] font-bold text-black">Pleasant push</p>
+              <p class="text-[14px] text-black">With microencapsulated NewCaff® &amp; green tea extract</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Health icons: 4 cols → 8 cols on lg -->
+        <div class="grid grid-cols-4 lg:grid-cols-8 gap-y-3">
+          <div class="flex flex-col items-center"><img src="https://www.figma.com/api/mcp/asset/88415626-a28a-4d2e-9332-db4c903d0f6b" alt="" class="w-[72px] h-[72px] lg:w-[88px] lg:h-[88px] object-contain"><p class="text-[11px] lg:text-[12px] font-bold text-center text-black leading-4 mt-1">Natural flavours</p></div>
+          <div class="flex flex-col items-center"><img src="https://www.figma.com/api/mcp/asset/99d3b664-befb-4fa5-aac0-3743c9ccd8b0" alt="" class="w-[72px] h-[72px] lg:w-[88px] lg:h-[88px] object-contain"><p class="text-[11px] lg:text-[12px] font-bold text-center text-black leading-4 mt-1">New Caff</p></div>
+          <div class="flex flex-col items-center"><img src="https://www.figma.com/api/mcp/asset/fe39b97e-0ea9-48b4-aca7-1a2b10eb5b3e" alt="" class="w-[72px] h-[72px] lg:w-[88px] lg:h-[88px] object-contain"><p class="text-[11px] lg:text-[12px] font-bold text-center text-black leading-4 mt-1">True tea</p></div>
+          <div class="flex flex-col items-center"><img src="https://www.figma.com/api/mcp/asset/ef12db4a-44b7-4fa2-9dec-9defcebcc6b1" alt="" class="w-[72px] h-[72px] lg:w-[88px] lg:h-[88px] object-contain"><p class="text-[11px] lg:text-[12px] font-bold text-center text-black leading-4 mt-1">Vegan</p></div>
+          <div class="flex flex-col items-center"><img src="https://www.figma.com/api/mcp/asset/e9deb45a-5817-4ef5-bcda-025ed17ea895" alt="" class="w-[72px] h-[72px] lg:w-[88px] lg:h-[88px] object-contain"><p class="text-[11px] lg:text-[12px] font-bold text-center text-black leading-4 mt-1">Low cal</p></div>
+          <div class="flex flex-col items-center"><img src="https://www.figma.com/api/mcp/asset/357d4688-87b1-446e-b753-7fc86fedbf43" alt="" class="w-[72px] h-[72px] lg:w-[88px] lg:h-[88px] object-contain"><p class="text-[11px] lg:text-[12px] font-bold text-center text-black leading-4 mt-1">No taurine</p></div>
+          <div class="flex flex-col items-center"><img src="https://www.figma.com/api/mcp/asset/d28a4d54-3bdf-4d39-9939-4edc3f7235b4" alt="" class="w-[72px] h-[72px] lg:w-[88px] lg:h-[88px] object-contain"><p class="text-[11px] lg:text-[12px] font-bold text-center text-black leading-4 mt-1">Full of vitamins</p></div>
+          <div class="flex flex-col items-center"><img src="https://www.figma.com/api/mcp/asset/fd2bee66-e120-4313-940c-21791e9452a4" alt="" class="w-[72px] h-[72px] lg:w-[88px] lg:h-[88px] object-contain"><p class="text-[11px] lg:text-[12px] font-bold text-center text-black leading-4 mt-1">Zero sugar</p></div>
+        </div>
+
+      </div>
+
+      <!-- ── Tab: Ingredients ─────────────────────────────────────── -->
+      <div id="tab-ingredients" class="tab-content hidden px-4 sm:px-6 lg:px-8 pt-8 pb-10">
+
+        <h2 class="text-[22px] lg:text-[26px] font-bold text-black leading-tight mb-4">Ingredients</h2>
+
+        <p class="text-[15px] text-black leading-[24px] mb-6 max-w-3xl">
+          Maltodextrin, Citric Acid, Natural Flavouring (Raspberry, Yuzu), Microencapsulated Caffeine (NewCaff®), Malic Acid,
+          <strong>Green Tea Extract</strong> (<em>Camellia sinensis</em> L.), Sweetener (Sucralose), Colour (Anthocyanin E163),
+          Vitamins [Vitamin C (L-Ascorbic Acid), Vitamin B3 (Nicotinamide), Vitamin B5 (Calcium D-Pantothenate),
+          Vitamin B6 (Pyridoxine Hydrochloride), Vitamin B7 (D-Biotin), Vitamin B9 (Folic Acid), Vitamin B12 (Cyanocobalamin)],
+          L-Theanine, Bacopa Monnieri Extract.
+        </p>
+
+        <div class="grid sm:grid-cols-2 gap-4 max-w-3xl">
+          <div class="bg-white/40 rounded-xl p-5">
+            <p class="text-[12px] font-bold uppercase text-black mb-2">Allergen information</p>
+            <p class="text-[14px] text-black leading-[22px]">
+              Made in a facility that also handles milk, soy, wheat, egg, and nut products. Suitable for vegans. Contains caffeine — not recommended for children or pregnant women.
+            </p>
+          </div>
+          <div class="bg-white/40 rounded-xl p-5">
+            <p class="text-[12px] font-bold uppercase text-black mb-2">Serving suggestion</p>
+            <p class="text-[14px] text-black leading-[22px]">
+              Mix one level scoop (12.5 g) with 500 ml of cold water. Shake or stir well before consuming. Best served chilled over ice.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ── Tab: Nutritional Facts ───────────────────────────────── -->
+      <div id="tab-nutrition" class="tab-content hidden px-4 sm:px-6 lg:px-8 pt-8 pb-10">
+
+        <h2 class="text-[22px] lg:text-[26px] font-bold text-black leading-tight mb-1">Nutritional Facts</h2>
+        <p class="text-[12px] text-black/60 mb-6">Per 100 ml prepared &nbsp;/&nbsp; Per serving (500 ml, 12.5 g powder)</p>
+
+        <div class="lg:flex lg:gap-10 lg:items-start max-w-4xl">
+
+          <table class="w-full lg:flex-1 text-[13px] lg:text-[14px] border-collapse mb-6 lg:mb-0">
+            <thead>
+              <tr class="border-b-2 border-black">
+                <th class="text-left font-bold pb-2">Nutrient</th>
+                <th class="text-right font-bold pb-2 w-[100px]">Per 100 ml</th>
+                <th class="text-right font-bold pb-2 w-[100px]">Per serving</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-black/10"><td class="py-2 font-bold">Energy</td><td class="py-2 text-right">5 kcal</td><td class="py-2 text-right">25 kcal</td></tr>
+              <tr class="border-b border-black/10 text-black/50"><td class="py-1 text-[12px] pl-1">&nbsp;21 kJ</td><td></td><td class="py-1 text-right text-[12px]">105 kJ</td></tr>
+              <tr class="border-b border-black/10"><td class="py-2 font-bold">Fat</td><td class="py-2 text-right">0 g</td><td class="py-2 text-right">0 g</td></tr>
+              <tr class="border-b border-black/10"><td class="py-2 pl-4 text-black/60 text-[12px]">of which saturates</td><td class="py-2 text-right text-black/60 text-[12px]">0 g</td><td class="py-2 text-right text-black/60 text-[12px]">0 g</td></tr>
+              <tr class="border-b border-black/10"><td class="py-2 font-bold">Carbohydrate</td><td class="py-2 text-right">0.8 g</td><td class="py-2 text-right">4 g</td></tr>
+              <tr class="border-b border-black/10"><td class="py-2 pl-4 text-black/60 text-[12px]">of which sugars</td><td class="py-2 text-right text-black/60 text-[12px]">0 g</td><td class="py-2 text-right text-black/60 text-[12px]">0 g</td></tr>
+              <tr class="border-b border-black/10"><td class="py-2 font-bold">Fibre</td><td class="py-2 text-right">0 g</td><td class="py-2 text-right">0 g</td></tr>
+              <tr class="border-b border-black/10"><td class="py-2 font-bold">Protein</td><td class="py-2 text-right">0 g</td><td class="py-2 text-right">0 g</td></tr>
+              <tr class="border-b border-black/10"><td class="py-2 font-bold">Salt</td><td class="py-2 text-right">0.02 g</td><td class="py-2 text-right">0.1 g</td></tr>
+              <tr class="border-b-2 border-black"><td class="py-2 font-bold">Caffeine†</td><td class="py-2 text-right">20 mg</td><td class="py-2 text-right">100 mg</td></tr>
+            </tbody>
+          </table>
+
+          <div class="lg:w-[280px] lg:flex-shrink-0">
+            <p class="text-[11px] text-black/50 mb-4 leading-4">† No established Nutrient Reference Value (NRV).<br>* % NRV for adults (8400 kJ / 2000 kcal).</p>
+            <div class="bg-white/40 rounded-xl p-5">
+              <p class="text-[12px] font-bold uppercase text-black mb-2">Preparation</p>
+              <p class="text-[14px] text-black leading-[22px]">Add one level scoop (12.5 g) to 500 ml cold water. Shake well. Nutritional values are calculated for the prepared drink.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- ── Tab: Vitamins Complex ────────────────────────────────── -->
+      <div id="tab-vitamins" class="tab-content hidden px-4 sm:px-6 lg:px-8 pt-8 pb-10">
+
+        <h2 class="text-[22px] lg:text-[26px] font-bold text-black leading-tight mb-1">Vitamins Complex</h2>
+        <p class="text-[15px] text-black leading-[24px] mb-6 max-w-2xl">
+          Each serving delivers 100% of your daily NRV for 7 essential vitamins to support energy, immunity and overall wellbeing.
+        </p>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 max-w-4xl">
+          <div class="bg-white/40 rounded-xl p-4 flex items-center justify-between"><div><p class="text-[14px] font-bold text-black">Vitamin C</p><p class="text-[12px] text-black/60">L-Ascorbic Acid</p></div><div class="text-right"><p class="text-[14px] font-bold text-black">80 mg</p><p class="text-[12px] text-trustgreen font-semibold">100% NRV</p></div></div>
+          <div class="bg-white/40 rounded-xl p-4 flex items-center justify-between"><div><p class="text-[14px] font-bold text-black">Vitamin B3</p><p class="text-[12px] text-black/60">Nicotinamide (Niacin)</p></div><div class="text-right"><p class="text-[14px] font-bold text-black">16 mg NE</p><p class="text-[12px] text-trustgreen font-semibold">100% NRV</p></div></div>
+          <div class="bg-white/40 rounded-xl p-4 flex items-center justify-between"><div><p class="text-[14px] font-bold text-black">Vitamin B5</p><p class="text-[12px] text-black/60">Calcium D-Pantothenate</p></div><div class="text-right"><p class="text-[14px] font-bold text-black">6 mg</p><p class="text-[12px] text-trustgreen font-semibold">100% NRV</p></div></div>
+          <div class="bg-white/40 rounded-xl p-4 flex items-center justify-between"><div><p class="text-[14px] font-bold text-black">Vitamin B6</p><p class="text-[12px] text-black/60">Pyridoxine Hydrochloride</p></div><div class="text-right"><p class="text-[14px] font-bold text-black">1.4 mg</p><p class="text-[12px] text-trustgreen font-semibold">100% NRV</p></div></div>
+          <div class="bg-white/40 rounded-xl p-4 flex items-center justify-between"><div><p class="text-[14px] font-bold text-black">Vitamin B7</p><p class="text-[12px] text-black/60">D-Biotin</p></div><div class="text-right"><p class="text-[14px] font-bold text-black">50 μg</p><p class="text-[12px] text-trustgreen font-semibold">100% NRV</p></div></div>
+          <div class="bg-white/40 rounded-xl p-4 flex items-center justify-between"><div><p class="text-[14px] font-bold text-black">Vitamin B9</p><p class="text-[12px] text-black/60">Folic Acid</p></div><div class="text-right"><p class="text-[14px] font-bold text-black">200 μg</p><p class="text-[12px] text-trustgreen font-semibold">100% NRV</p></div></div>
+          <div class="bg-white/40 rounded-xl p-4 flex items-center justify-between"><div><p class="text-[14px] font-bold text-black">Vitamin B12</p><p class="text-[12px] text-black/60">Cyanocobalamin</p></div><div class="text-right"><p class="text-[14px] font-bold text-black">2.5 μg</p><p class="text-[12px] text-trustgreen font-semibold">100% NRV</p></div></div>
+        </div>
+
+      </div>
+
+      <!-- ── Tab: Nootropics Complex ──────────────────────────────── -->
+      <div id="tab-nootropics" class="tab-content hidden px-4 sm:px-6 lg:px-8 pt-8 pb-10">
+
+        <h2 class="text-[22px] lg:text-[26px] font-bold text-black leading-tight mb-1">Nootropics Complex</h2>
+        <p class="text-[15px] text-black leading-[24px] mb-6 max-w-2xl">
+          Our carefully formulated nootropics blend enhances focus and cognitive performance without the crash or jitters.
+        </p>
+
+        <div class="grid sm:grid-cols-2 gap-4 max-w-4xl">
+          <div class="bg-white/40 rounded-xl p-5"><div class="flex justify-between mb-2"><p class="text-[14px] font-bold text-black">NewCaff®</p><p class="text-[14px] font-bold text-black">100 mg</p></div><p class="text-[13px] text-black/70 leading-[20px]">Microencapsulated caffeine for a smooth, sustained energy release — no spikes, no crashes. Gentler on the stomach than standard caffeine.</p></div>
+          <div class="bg-white/40 rounded-xl p-5"><div class="flex justify-between mb-2"><p class="text-[14px] font-bold text-black">L-Theanine</p><p class="text-[14px] font-bold text-black">50 mg</p></div><p class="text-[13px] text-black/70 leading-[20px]">An amino acid found naturally in green tea that promotes relaxed alertness and reduces the jitteriness associated with caffeine.</p></div>
+          <div class="bg-white/40 rounded-xl p-5"><div class="flex justify-between mb-2"><p class="text-[14px] font-bold text-black">Green Tea Extract</p><p class="text-[14px] font-bold text-black">25 mg</p></div><p class="text-[13px] text-black/70 leading-[20px]">Rich in EGCG and natural antioxidants. Supports mental clarity, metabolic health, and provides a gentle lift.</p></div>
+          <div class="bg-white/40 rounded-xl p-5"><div class="flex justify-between mb-2"><p class="text-[14px] font-bold text-black">Bacopa Monnieri</p><p class="text-[14px] font-bold text-black">15 mg</p></div><p class="text-[13px] text-black/70 leading-[20px]">An adaptogenic herb used in Ayurvedic tradition to support memory, learning, and sustained cognitive performance.</p></div>
+        </div>
+
+      </div>
+
+      <!-- ── Tab: Storage ─────────────────────────────────────────── -->
+      <div id="tab-storage" class="tab-content hidden px-4 sm:px-6 lg:px-8 pt-8 pb-10">
+
+        <h2 class="text-[22px] lg:text-[26px] font-bold text-black leading-tight mb-6">Storage &amp; Usage</h2>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl">
+          <div class="bg-white/40 rounded-xl p-5">
+            <p class="text-[14px] font-bold text-black mb-2">Storage instructions</p>
+            <p class="text-[14px] text-black leading-[22px]">Store in a cool, dry place away from direct sunlight. Do not refrigerate. Once opened, reseal the tub tightly and use within 3 months.</p>
+          </div>
+          <div class="bg-white/40 rounded-xl p-5">
+            <p class="text-[14px] font-bold text-black mb-2">How to prepare</p>
+            <p class="text-[14px] text-black leading-[22px]">Add one level scoop (12.5 g) to 500 ml of cold water. Shake or stir well until fully dissolved. Best served chilled over ice. Do not heat.</p>
+          </div>
+          <div class="bg-white/40 rounded-xl p-5 sm:col-span-2 lg:col-span-1">
+            <p class="text-[14px] font-bold text-black mb-2">Important caution</p>
+            <ul class="text-[14px] text-black leading-[22px] list-disc pl-4 space-y-1">
+              <li>Not suitable for children under 16</li>
+              <li>Not suitable during pregnancy</li>
+              <li>Avoid if sensitive to caffeine</li>
+              <li>Max 2 servings per day</li>
+              <li>Keep out of reach of children</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </div><!-- /max-w-7xl nutrition inner -->
+  </div><!-- /nutrition section -->
+
+  <div class="h-10 bg-raspberry-light"></div>
+
+<script>
+  /* ── Carousel ─────────────────────────────── */
+  let currentSlide = 0;
+  const totalSlides = 4;
+
+  function updateCarousel() {
+    document.getElementById('carousel-track').style.transform = `translateX(-${currentSlide * 100}%)`;
+    document.querySelectorAll('[data-dot]').forEach((dot, i) => {
+      dot.classList.toggle('active', i === currentSlide);
+    });
+  }
+
+  function nextSlide() { currentSlide = (currentSlide + 1) % totalSlides; updateCarousel(); }
+  function prevSlide() { currentSlide = (currentSlide - 1 + totalSlides) % totalSlides; updateCarousel(); }
+  function goToSlide(i) { currentSlide = i; updateCarousel(); }
+
+  // Touch swipe
+  let touchStartX = 0;
+  const cw = document.getElementById('carousel-wrapper');
+  cw.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  cw.addEventListener('touchend', e => {
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) diff > 0 ? nextSlide() : prevSlide();
+  });
+
+  /* ── Tabs ─────────────────────────────────── */
+  function switchTab(tabId) {
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.classList.remove('border-black', 'text-black');
+      btn.classList.add('border-transparent', 'text-[#737373]');
+    });
+    document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+
+    const btn = document.querySelector(`[data-tab="${tabId}"]`);
+    btn.classList.remove('border-transparent', 'text-[#737373]');
+    btn.classList.add('border-black', 'text-black');
+    btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+
+    document.getElementById(`tab-${tabId}`).classList.remove('hidden');
+  }
+
+  /* ── Size selector ───────────────────────── */
+  function selectSize(btn) {
+    document.querySelectorAll('.size-option').forEach(el => {
+      el.classList.remove('border-2', 'border-black');
+      el.classList.add('border', 'border-black/15');
+    });
+    btn.classList.remove('border', 'border-black/15');
+    btn.classList.add('border-2', 'border-black');
+  }
+</script>
+
+</body>
+</html>

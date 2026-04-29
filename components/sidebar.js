@@ -57,6 +57,11 @@
         ${navLink('pages/breakpoints.html', 'Breakpoints')}
       </div>
 
+      <div class="nav-group">
+        <span class="nav-group-label">Sandbox</span>
+        ${navLink('sandbox/nutrition/index.html', 'PDP — Nutrition Tabs')}
+      </div>
+
       <!-- <div class="nav-group">
         <span class="nav-group-label">Components</span>
         <a class="nav-link" href="${base}pages/announcement-bar.html"><span class="nav-dot"></span> Announcement Bar</a>
